@@ -7,10 +7,10 @@ export default function Philosophy({ onOpenBooking }) {
   return (
     <section className="philosophy-section" id="philosophy">
       <div className="container philosophy-container">
-        {/* Header */}
+        {/* Section Header */}
         <div className="philosophy-header">
-          <span className="section-badge">{philosophy.badge}</span>
-          <h2 className="section-heading-serif">{philosophy.title}</h2>
+          <span className="section-badge-olive">{philosophy.badge}</span>
+          <h2 className="section-heading-olive">{philosophy.title}</h2>
         </div>
 
         {/* 3 Philosophy Cards */}
@@ -23,12 +23,12 @@ export default function Philosophy({ onOpenBooking }) {
           ))}
         </div>
 
-        {/* CTA Button bottom right/center */}
-        <div className="philosophy-footer-action">
+        {/* Right-aligned "Find more" pill button */}
+        <div className="philosophy-action-wrap">
           <button
             onClick={onOpenBooking}
-            className="btn-pill-muted"
-            id="philosophy-know-more-btn"
+            className="btn-find-more"
+            id="philosophy-find-more-btn"
           >
             {philosophy.ctaText}
           </button>

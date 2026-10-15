@@ -3,7 +3,6 @@ export const clinicData = {
     name: "LIORA",
     tagline: "LUXEE WELLNESS",
     fullName: "Liora Luxee Wellness",
-    description: "A luxury dermatology clinic dedicated to advanced healthy, radiant skin care. Combining science and aesthetics to elevate skin wellness & confidence.",
   },
 
   navigation: [
@@ -18,22 +17,14 @@ export const clinicData = {
     highlight: "Radience & Peace at",
     clinicName: "Liora Luxee Wellness",
     ctaText: "Book Consultation",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=85",
+    image: "/assets/pdf_img_10_2556x3194.jpeg",
   },
 
   whoWeAre: {
-    subtitle: "Who We Are",
-    heading: "Where Clinical Science Meets Timeless Radiance",
-    paragraphs: [
-      "Liora Luxee Wellness is a luxury dermatology clinic dedicated to advanced healthy, radiant skin care. Through advanced treatments & personalized care, we combine science and aesthetics to elevate skin wellness & confidence.",
-      "The aim is to illuminate natural beauty & bring confidence that shines from within.",
-    ],
-    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=800&q=85",
-    stats: [
-      { number: "99%", label: "Client Satisfaction" },
-      { number: "15+", label: "Bespoke Protocols" },
-      { number: "10k+", label: "Radiant Transformations" },
-    ],
+    title: "Who We Are",
+    paragraph:
+      "Liora Luxee Wellness is a luxury dermatology clinic dedicated to advanced healthy, radiant skin care. Through advanced treatments & personalized care, we combine science and aesthetics to elevate skin wellness & confidence. The aim is to illuminate natural beauty & bring confidence that shines from within.",
+    image: "/assets/pdf_img_8_720x900.jpeg",
   },
 
   philosophy: {
@@ -43,23 +34,23 @@ export const clinicData = {
       {
         id: 1,
         title: "Lorem ipsum",
-        category: "Personalized Care",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
       {
         id: 2,
         title: "Lorem ipsum",
-        category: "Clinical Precision",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
       {
         id: 3,
         title: "Lorem ipsum",
-        category: "Holistic Longevity",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
     ],
-    ctaText: "Know more",
+    ctaText: "Find more",
   },
 
   whatWeDo: {
@@ -68,31 +59,35 @@ export const clinicData = {
     services: [
       {
         id: 1,
-        title: "Lorem\nipsum",
-        treatmentName: "Hydra Glow Infusion",
-        image: "https://images.unsplash.com/photo-1512290900672-1f023072239e?auto=format&fit=crop&w=600&q=80",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        titleLine1: "Lorem",
+        titleLine2: "ipsum",
+        image: "/assets/treatment_1.png",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
       {
         id: 2,
-        title: "Lorem\nipsum",
-        treatmentName: "Collagen Laser Renewal",
-        image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        titleLine1: "Lorem",
+        titleLine2: "ipsum",
+        image: "/assets/treatment_2.png",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
       {
         id: 3,
-        title: "Lorem\nipsum",
-        treatmentName: "Cellular Detox Therapy",
-        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        titleLine1: "Lorem",
+        titleLine2: "ipsum",
+        image: "/assets/treatment_3.png",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
       {
         id: 4,
-        title: "Lorem\nipsum",
-        treatmentName: "Sculpt & Lift Architecture",
-        image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=600&q=80",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        titleLine1: "Lorem",
+        titleLine2: "ipsum",
+        image: "/assets/treatment_4.png",
+        description:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
     ],
   },
@@ -100,67 +95,49 @@ export const clinicData = {
   gallery: [
     {
       id: 1,
-      caption: "Private Treatment Suite",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_1.png",
+      alt: "Treatment suite with massage bed",
     },
     {
       id: 2,
-      caption: "Liora Reception & Concierge",
-      image: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_2.png",
+      alt: "Marble reception with illuminated LIORA sign",
     },
     {
       id: 3,
-      caption: "Botanical Formulations",
-      image: "https://images.unsplash.com/photo-1608248597359-5b43729d33b4?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_3.png",
+      alt: "Skincare bottles on travertine",
     },
     {
       id: 4,
-      caption: "Doctor Consultation Lounge",
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_4.png",
+      alt: "Consultation lounge",
     },
     {
       id: 5,
-      caption: "Curated Skincare Dispensary",
-      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_5.png",
+      alt: "Warmly lit boutique display shelves",
     },
     {
       id: 6,
-      caption: "Sanctuary Ambience",
-      image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/gallery_exact_6.png",
+      alt: "Lush plant wall with backlit LIORA sign",
     },
   ],
 
   testimonials: {
     badge: "Testimonials",
     title: "What our\nclients say",
-    items: [
-      {
-        id: 1,
-        quote: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
-        author: "Aaradhya Kapoor",
-        designation: "Executive Client & Wellness Patron",
-        rating: 5,
-      },
-      {
-        id: 2,
-        quote: "The personalized aesthetic diagnosis at Liora transformed my skin within weeks. Their clinical precision combined with the serene spa sanctuary is unmatched in luxury skincare.",
-        author: "Dr. Meera Sen",
-        designation: "Aesthetic Enthusiast",
-        rating: 5,
-      },
-      {
-        id: 3,
-        quote: "Every session feels like an elevated ritual. The calm architecture, courteous dermatologists, and radiant results make Liora my perpetual sanctuary.",
-        author: "Rohan Singhal",
-        designation: "Verified Member",
-        rating: 5,
-      },
-    ],
+    quote:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+    author: "NAME",
   },
 
   sanctuary: {
-    title: "A moment to pause.\nA ritual to restore.",
-    subtitle: "Book your session today and let our amazing experience be your sanctuary for a balanced life.",
+    line1: "A moment to pause.",
+    line2: "A ritual to restore.",
+    subtitle:
+      "Book your session  and let our amazing experience be your sanctuary for a balanced life.",
     ctaText: "Book Consultation",
   },
 
@@ -175,8 +152,8 @@ export const clinicData = {
     address: "Defence Colony, New Delhi 110070",
     phone: "+91 99999 99999",
     email: "info@lioraluxeewellness.com",
-    timings: "10:00 AM – 8:00 PM",
-    days: "Monday – Sunday",
+    timings: "10:00 AM 8:00 PM",
+    days: "Monday Sunday",
     navLinks: [
       { label: "Home", href: "#home" },
       { label: "About", href: "#about" },

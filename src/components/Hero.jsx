@@ -1,7 +1,7 @@
 import React from 'react';
 import { clinicData } from '../data/clinicData';
 
-export default function Hero({ onOpenBooking }) {
+export default function Hero() {
   const { hero } = clinicData;
 
   return (
@@ -9,7 +9,7 @@ export default function Hero({ onOpenBooking }) {
       <div className="hero-background-wrapper">
         <img
           src={hero.image}
-          alt="Liora Luxee Wellness treatment"
+          alt="Liora Luxee Wellness facial treatment"
           className="hero-bg-image"
           loading="eager"
         />

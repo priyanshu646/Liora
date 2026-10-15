@@ -1,7 +1,7 @@
 import React from 'react';
 import { clinicData } from '../data/clinicData';
 
-export default function ExperienceBanner({ onOpenBooking }) {
+export default function ExperienceBanner() {
   const { experience } = clinicData;
 
   return (
