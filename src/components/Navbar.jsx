@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { clinicData } from '../data/clinicData';
 
-export default function Navbar({ onOpenBooking }) {
+export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,22 +18,60 @@ export default function Navbar({ onOpenBooking }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLinkClick = (e, item) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const target = item.label.toLowerCase();
+
+    if (onNavigate) {
+      if (target === 'contact') {
+        onNavigate('contact');
+      } else if (target === 'home') {
+        onNavigate('home');
+      } else {
+        onNavigate('home', target);
+      }
+    } else {
+      window.location.hash = item.href;
+    }
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate('home');
+    } else {
+      window.location.hash = '#home';
+    }
+  };
+
   return (
     <header className={`navbar-header ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Brand Logo - clean "LIORA" as in PDF header */}
-        <a href="#home" className="navbar-logo">
+        <a href="#home" onClick={handleLogoClick} className="navbar-logo">
           <span className="navbar-brand-name">LIORA</span>
         </a>
 
         {/* Right side group: Nav links + Book Consultation button */}
         <div className="navbar-right-group">
           <nav className="navbar-nav">
-            {clinicData.navigation.map((item) => (
-              <a key={item.label} href={item.href} className="navbar-link">
-                {item.label}
-              </a>
-            ))}
+            {clinicData.navigation.map((item) => {
+              const isContact = item.label === 'Contact';
+              const isContactActive = isContact && currentPage === 'contact';
+              const isHomeActive = item.label === 'Home' && currentPage === 'home';
+
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item)}
+                  className={`navbar-link ${isContactActive ? 'contact-nav-active' : ''} ${isHomeActive ? 'home-nav-active' : ''}`}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </nav>
 
           <button
@@ -58,16 +96,21 @@ export default function Navbar({ onOpenBooking }) {
       {/* Mobile Drawer */}
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-nav-inner">
-          {clinicData.navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="mobile-nav-link"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {clinicData.navigation.map((item) => {
+            const isContact = item.label === 'Contact';
+            const isContactActive = isContact && currentPage === 'contact';
+
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`mobile-nav-link ${isContactActive ? 'contact-nav-active' : ''}`}
+                onClick={(e) => handleLinkClick(e, item)}
+              >
+                {item.label}
+              </a>
+            );
+          })}
           <button
             onClick={() => {
               setMobileMenuOpen(false);

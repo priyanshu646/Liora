@@ -149,11 +149,11 @@ export const clinicData = {
   footer: {
     brand: "LIORA",
     brandSub: "LUXEE WELLNESS",
-    address: "Defence Colony, New Delhi 110070",
+    address: "3rd Floor, D-28, Defence Colony, New Delhi, 110024",
     phone: "+91 99999 99999",
     email: "info@lioraluxeewellness.com",
-    timings: "10:00 AM 8:00 PM",
-    days: "Monday Sunday",
+    timings: "10:00 AM - 8:00 PM",
+    days: "Monday - Sunday",
     navLinks: [
       { label: "Home", href: "#home" },
       { label: "About", href: "#about" },
@@ -161,5 +161,81 @@ export const clinicData = {
       { label: "Contact", href: "#contact" },
       { label: "Franchise", href: "#franchise" },
     ],
+  },
+
+  contactPage: {
+    hero: {
+      line1: "Rediscover your",
+      line2: "Radiance & Peace",
+      image: "/assets/contact/contact_img_0_1200x1799.jpeg",
+    },
+    chat: {
+      eyebrow: "Have questions?",
+      title: "Chat with our team",
+    },
+    info: {
+      eyebrow: "Contact",
+      title: "Liora Luxee Wellness",
+      cards: [
+        { label: "Call", value: "+91 99999 00000", href: "tel:+919999900000" },
+        { label: "Email", value: "info@lioraluxeewellness.com", href: "mailto:info@lioraluxeewellness.com" },
+        { label: "Hours", value: "10:00 AM - 08:00 PM", href: null },
+      ],
+      map: {
+        address: "3rd Floor, D-28, Defence Colony, New Delhi, 110024",
+        googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=3rd+Floor,+D-28,+Defence+Colony,+New+Delhi,+110024",
+        embedUrl: "https://maps.google.com/maps?q=D-28,+Defence+Colony,+New+Delhi,+110024&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        staticMapImg: "/assets/contact/rendered_map_with_pin.png",
+      },
+    },
+    faqs: {
+      eyebrow: "FAQs",
+      title: "Immerse yourself in luxury",
+      image: "/assets/contact/faq_illustration.png",
+      items: [
+        {
+          id: 1,
+          question: "Lorem ipsum dolor sit amet",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+        {
+          id: 2,
+          question: "Lorem ipsum dolor sit amet",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+        {
+          id: 3,
+          question: "Lorem ipsum dolor sit amet",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+        {
+          id: 4,
+          question: "Lorem ipsum dolor sit amet",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+      ],
+    },
+    cards: {
+      consultation: {
+        title: "Book a consultation",
+        description:
+          "Share your details and our team will call you to confirm a time at the clinic of your choice.",
+        ctaText: "Book Appointment",
+      },
+      followUs: {
+        title: "Follow Us",
+        description:
+          "Stay updated with latest treatments, skincare tips, special offers",
+        socials: [
+          { name: "Instagram", href: "https://instagram.com" },
+          { name: "Facebook", href: "https://facebook.com" },
+          { name: "LinkedIn", href: "https://linkedin.com" },
+        ],
+      },
+    },
   },
 };

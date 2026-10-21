@@ -2,25 +2,43 @@ import React from 'react';
 import { clinicData } from '../data/clinicData';
 import { MapPin, Phone, Mail, Clock, Calendar } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   const { footer } = clinicData;
 
+  const handleLinkClick = (e, link) => {
+    e.preventDefault();
+    const target = link.label.toLowerCase();
+    if (onNavigate) {
+      if (target === 'contact') {
+        onNavigate('contact');
+      } else if (target === 'home') {
+        onNavigate('home');
+      } else {
+        onNavigate('home', target);
+      }
+    } else {
+      window.location.hash = link.href;
+    }
+  };
+
   return (
-    <footer className="site-footer" id="contact">
+    <footer className="site-footer" id="footer-contact">
       {/* Background Watermark Oval Motif on right side */}
       <div className="footer-watermark" aria-hidden="true">
-        <svg viewBox="0 0 320 400" className="watermark-svg" fill="none">
-          <path
-            d="M 160,20 C 60,60 60,340 160,380 C 260,340 260,60 160,20 Z"
-            stroke="rgba(255, 255, 255, 0.12)"
-            strokeWidth="38"
-          />
+        <svg viewBox="0 0 380 450" className="watermark-svg" fill="none">
           <ellipse
-            cx="160"
-            cy="200"
-            rx="45"
-            ry="75"
-            fill="rgba(255, 255, 255, 0.06)"
+            cx="220"
+            cy="240"
+            rx="150"
+            ry="200"
+            stroke="rgba(212, 177, 163, 0.45)"
+            strokeWidth="48"
+          />
+          <circle
+            cx="210"
+            cy="150"
+            r="38"
+            fill="rgba(212, 177, 163, 0.45)"
           />
         </svg>
       </div>
@@ -66,7 +84,11 @@ export default function Footer() {
           <ul className="footer-nav-list">
             {footer.navLinks.map((link) => (
               <li key={link.label} className="footer-nav-item">
-                <a href={link.href} className="footer-nav-link">
+                <a
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link)}
+                  className="footer-nav-link"
+                >
                   {link.label}
                 </a>
               </li>
