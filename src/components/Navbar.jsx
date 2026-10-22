@@ -46,7 +46,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
   };
 
   return (
-    <header className={`navbar-header ${isScrolled ? 'navbar-scrolled' : ''}`}>
+    <header className={`navbar-header ${currentPage === 'contact' ? 'contact-navbar-header' : ''} ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Brand Logo - clean "LIORA" as in PDF header */}
         <a href="#home" onClick={handleLogoClick} className="navbar-logo">

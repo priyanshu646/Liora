@@ -167,7 +167,7 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/contact/contact_img_0_1200x1799.jpeg",
+      image: "/assets/contact/contact_hero_wide.jpg",
     },
     chat: {
       eyebrow: "Have questions?",
@@ -184,7 +184,7 @@ export const clinicData = {
       map: {
         address: "3rd Floor, D-28, Defence Colony, New Delhi, 110024",
         googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=3rd+Floor,+D-28,+Defence+Colony,+New+Delhi,+110024",
-        embedUrl: "https://maps.google.com/maps?q=D-28,+Defence+Colony,+New+Delhi,+110024&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        embedUrl: "https://maps.google.com/maps?q=28.5717,77.2311&z=16&ie=UTF8&iwloc=&output=embed",
         staticMapImg: "/assets/contact/rendered_map_with_pin.png",
       },
     },
