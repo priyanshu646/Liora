@@ -787,5 +787,152 @@ export const clinicData = {
       },
     },
   },
+
+  aboutPage: {
+    hero: {
+      line1: "Rediscover your",
+      line2: "Radiance & Peace",
+      image: "/assets/about/hero_arch_exact.png",
+      fullBanner: "/assets/about/about_hero_banner_exact.png",
+    },
+    introQuote: {
+      text: "LIORA was born from a simple belief true luxury is not only about how you look, but how you feel. Created to redefine modern self-care, LIORA brings together advanced wellness, beauty, aesthetics, & exceptional experiences under one distinctive vision. Inspired by the Hebrew name Liora, meaning “my light” or “God’s light,” LIORA represents radiance, renewal, & inner grace.",
+    },
+    ourStory: {
+      title: "Our Story",
+      paragraph: "Liora Luxee Wellness was created to bring together advanced dermatology and refined wellness. Built on the belief that healthy skin enhances confidence & well-being, Liora offers science-driven treatments in a calm, luxurious environment. By combining medical expertise with personalized care, we focus on restoring, rejuvenating, and enhancing natural skin health.",
+      image: "/assets/about/our_story_arch_exact.png",
+    },
+    whyLiora: {
+      eyebrow: "Why Liora?",
+      title: "Lorem ipsum dolor sit amet",
+      image: "/assets/about/why_liora_arch_exact.png",
+      accordion: [
+        {
+          id: 1,
+          title: "Lorem ipsum dolor sit amet",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+        {
+          id: 2,
+          title: "Lorem ipsum dolor sit amet",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+        {
+          id: 3,
+          title: "Lorem ipsum dolor sit amet",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+        {
+          id: 4,
+          title: "Lorem ipsum dolor sit amet",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+        {
+          id: 5,
+          title: "Lorem ipsum dolor sit amet",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
+        },
+      ],
+    },
+    ourValues: {
+      eyebrow: "Our Values",
+      title: "Lorem ipsum dolor sit amet",
+      values: [
+        {
+          id: 1,
+          title: "Lorem ipsum",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+        {
+          id: 2,
+          title: "Lorem ipsum",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+        {
+          id: 3,
+          title: "Lorem ipsum",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+        {
+          id: 4,
+          title: "Lorem ipsum",
+          description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+        },
+      ],
+    },
+    missionVision: {
+      mission: {
+        title: "Mission",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+      },
+      vision: {
+        title: "Vision",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
+      },
+      image: "/assets/about/mission_vision_arch_exact.png",
+    },
+    interiorGallery: [
+      {
+        id: 1,
+        image: "/assets/about/interior_slider_exact.png",
+        title: "Main Reception & Consultation Suite",
+        alt: "LIORA reception desk with marble finishes and warm atmospheric lighting",
+      },
+      {
+        id: 2,
+        image: "/assets/gallery_exact_1.png",
+        title: "Private Treatment Sanctuary",
+        alt: "Private aesthetic treatment suite with luxury treatment bed",
+      },
+      {
+        id: 3,
+        image: "/assets/gallery_exact_4.png",
+        title: "Executive Consultation Lounge",
+        alt: "Consultation lounge with plush seating and tranquil ambience",
+      },
+      {
+        id: 4,
+        image: "/assets/gallery_exact_6.png",
+        title: "Illuminated Plant Gallery",
+        alt: "Living plant wall with illuminated LIORA emblem",
+      },
+      {
+        id: 5,
+        image: "/assets/gallery_exact_2.png",
+        title: "Liora Grand Travertine Lobby",
+        alt: "Travertine and fluted oak reception greeting guests",
+      },
+    ],
+    experts: {
+      title: "The magic from our skilled experts",
+      team: [
+        {
+          id: 1,
+          name: "Name",
+          role: "Lorem ipsum dolor sit amet,\nconsectetuer adipiscing elit,",
+          image: "/assets/about/expert_1_exact.png",
+        },
+        {
+          id: 2,
+          name: "Name",
+          role: "Lorem ipsum dolor sit amet,\nconsectetuer adipiscing elit,",
+          image: "/assets/about/expert_2_exact.png",
+        },
+        {
+          id: 3,
+          name: "Name",
+          role: "Lorem ipsum dolor sit amet,\nconsectetuer adipiscing elit,",
+          image: "/assets/about/expert_3_exact.png",
+        },
+        {
+          id: 4,
+          name: "Name",
+          role: "Lorem ipsum dolor sit amet,\nconsectetuer adipiscing elit,",
+          image: "/assets/about/expert_4_exact.png",
+        },
+      ],
+    },
+  },
 };
 

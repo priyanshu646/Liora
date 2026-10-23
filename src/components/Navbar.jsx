@@ -28,6 +28,8 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
         onNavigate('contact');
       } else if (target === 'services') {
         onNavigate('services');
+      } else if (target === 'about') {
+        onNavigate('about');
       } else if (target === 'home') {
         onNavigate('home');
       } else {
@@ -48,7 +50,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
   };
 
   return (
-    <header className={`navbar-header ${currentPage === 'contact' ? 'contact-navbar-header' : ''} ${isScrolled ? 'navbar-scrolled' : ''}`}>
+    <header className={`navbar-header ${currentPage === 'contact' ? 'contact-navbar-header' : ''} ${currentPage === 'about' ? 'about-navbar-header' : ''} ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Brand Logo - clean "LIORA" as in PDF header */}
         <a href="#home" onClick={handleLogoClick} className="navbar-logo">
@@ -62,6 +64,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
               const isContact = item.label === 'Contact';
               const isContactActive = isContact && currentPage === 'contact';
               const isServicesActive = item.label === 'Services' && currentPage === 'services';
+              const isAboutActive = item.label === 'About' && currentPage === 'about';
               const isHomeActive = item.label === 'Home' && currentPage === 'home';
 
               return (
@@ -69,7 +72,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item)}
-                  className={`navbar-link ${isContactActive ? 'contact-nav-active' : ''} ${isHomeActive ? 'home-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''}`}
+                  className={`navbar-link ${isContactActive ? 'contact-nav-active' : ''} ${isHomeActive ? 'home-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''} ${isAboutActive ? 'about-nav-active' : ''}`}
                 >
                   {item.label}
                 </a>
@@ -103,12 +106,13 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
             const isContact = item.label === 'Contact';
             const isContactActive = isContact && currentPage === 'contact';
             const isServicesActive = item.label === 'Services' && currentPage === 'services';
+            const isAboutActive = item.label === 'About' && currentPage === 'about';
 
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className={`mobile-nav-link ${isContactActive ? 'contact-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''}`}
+                className={`mobile-nav-link ${isContactActive ? 'contact-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''} ${isAboutActive ? 'about-nav-active' : ''}`}
                 onClick={(e) => handleLinkClick(e, item)}
               >
                 {item.label}

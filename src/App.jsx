@@ -13,33 +13,38 @@ import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import ContactPage from './components/ContactPage';
 import ServicesPage from './components/ServicesPage';
+import AboutPage from './components/AboutPage';
 
 export default function App() {
-  // Defaults to 'services' page as requested by user
-  const [currentPage, setCurrentPage] = useState('services');
+  // Defaults to 'about' page as requested by user
+  const [currentPage, setCurrentPage] = useState('about');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
   useEffect(() => {
-    // Check initial hash if user loaded with #home, #services or #contact
+    // Check initial hash if user loaded with #home, #services, #contact, or #about
     const initialHash = window.location.hash.replace('#', '').toLowerCase();
-    if (initialHash === 'services') {
+    if (initialHash === 'about') {
+      setCurrentPage('about');
+    } else if (initialHash === 'services') {
       setCurrentPage('services');
     } else if (initialHash === 'contact') {
       setCurrentPage('contact');
-    } else if (initialHash === 'home' || initialHash === 'about' || initialHash === 'franchise') {
+    } else if (initialHash === 'home' || initialHash === 'franchise') {
       setCurrentPage('home');
     }
 
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '').toLowerCase();
-      if (hash === 'services') {
+      if (hash === 'about') {
+        setCurrentPage('about');
+      } else if (hash === 'services') {
         setCurrentPage('services');
       } else if (hash === 'contact') {
         setCurrentPage('contact');
-      } else if (hash === 'home' || hash === 'about' || hash === 'franchise') {
+      } else if (hash === 'home' || hash === 'franchise') {
         setCurrentPage('home');
       }
     };
@@ -70,7 +75,9 @@ export default function App() {
       />
 
       <main>
-        {currentPage === 'contact' ? (
+        {currentPage === 'about' ? (
+          <AboutPage onOpenBooking={handleOpenBooking} />
+        ) : currentPage === 'contact' ? (
           <ContactPage onOpenBooking={handleOpenBooking} />
         ) : currentPage === 'services' ? (
           <ServicesPage onOpenBooking={handleOpenBooking} />
