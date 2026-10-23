@@ -26,6 +26,8 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
     if (onNavigate) {
       if (target === 'contact') {
         onNavigate('contact');
+      } else if (target === 'services') {
+        onNavigate('services');
       } else if (target === 'home') {
         onNavigate('home');
       } else {
@@ -59,6 +61,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
             {clinicData.navigation.map((item) => {
               const isContact = item.label === 'Contact';
               const isContactActive = isContact && currentPage === 'contact';
+              const isServicesActive = item.label === 'Services' && currentPage === 'services';
               const isHomeActive = item.label === 'Home' && currentPage === 'home';
 
               return (
@@ -66,7 +69,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item)}
-                  className={`navbar-link ${isContactActive ? 'contact-nav-active' : ''} ${isHomeActive ? 'home-nav-active' : ''}`}
+                  className={`navbar-link ${isContactActive ? 'contact-nav-active' : ''} ${isHomeActive ? 'home-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''}`}
                 >
                   {item.label}
                 </a>
@@ -99,12 +102,13 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
           {clinicData.navigation.map((item) => {
             const isContact = item.label === 'Contact';
             const isContactActive = isContact && currentPage === 'contact';
+            const isServicesActive = item.label === 'Services' && currentPage === 'services';
 
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className={`mobile-nav-link ${isContactActive ? 'contact-nav-active' : ''}`}
+                className={`mobile-nav-link ${isContactActive ? 'contact-nav-active' : ''} ${isServicesActive ? 'services-nav-active' : ''}`}
                 onClick={(e) => handleLinkClick(e, item)}
               >
                 {item.label}

@@ -11,6 +11,8 @@ export default function Footer({ onNavigate }) {
     if (onNavigate) {
       if (target === 'contact') {
         onNavigate('contact');
+      } else if (target === 'services') {
+        onNavigate('services');
       } else if (target === 'home') {
         onNavigate('home');
       } else {

@@ -12,30 +12,35 @@ import ExperienceBanner from './components/ExperienceBanner';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import ContactPage from './components/ContactPage';
+import ServicesPage from './components/ServicesPage';
 
 export default function App() {
-  // Defaults to 'contact' page so the contact page requested by user is shown immediately
-  const [currentPage, setCurrentPage] = useState('contact');
+  // Defaults to 'services' page as requested by user
+  const [currentPage, setCurrentPage] = useState('services');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
   const handleCloseBooking = () => setIsBookingOpen(false);
 
   useEffect(() => {
-    // Check initial hash if user loaded with #home or #contact
+    // Check initial hash if user loaded with #home, #services or #contact
     const initialHash = window.location.hash.replace('#', '').toLowerCase();
-    if (initialHash === 'home' || initialHash === 'about' || initialHash === 'services' || initialHash === 'franchise') {
-      setCurrentPage('home');
+    if (initialHash === 'services') {
+      setCurrentPage('services');
     } else if (initialHash === 'contact') {
       setCurrentPage('contact');
+    } else if (initialHash === 'home' || initialHash === 'about' || initialHash === 'franchise') {
+      setCurrentPage('home');
     }
 
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '').toLowerCase();
-      if (hash === 'home' || hash === 'about' || hash === 'services' || hash === 'franchise') {
-        setCurrentPage('home');
+      if (hash === 'services') {
+        setCurrentPage('services');
       } else if (hash === 'contact') {
         setCurrentPage('contact');
+      } else if (hash === 'home' || hash === 'about' || hash === 'franchise') {
+        setCurrentPage('home');
       }
     };
 
@@ -67,6 +72,8 @@ export default function App() {
       <main>
         {currentPage === 'contact' ? (
           <ContactPage onOpenBooking={handleOpenBooking} />
+        ) : currentPage === 'services' ? (
+          <ServicesPage onOpenBooking={handleOpenBooking} />
         ) : (
           <>
             {/* 1. Hero Section */}
