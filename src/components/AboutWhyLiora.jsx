@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { clinicData } from '../data/clinicData';
-import { ChevronDown } from 'lucide-react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 export default function AboutWhyLiora() {
   const { whyLiora } = clinicData.aboutPage;
@@ -14,9 +14,9 @@ export default function AboutWhyLiora() {
     <section className="about-why-section" id="why-liora">
       <div className="container about-why-container">
         <div className="about-why-grid">
-          {/* Left Arched Portrait */}
+          {/* Left Oval Portrait */}
           <div className="about-why-media">
-            <div className="about-why-arch-frame">
+            <div className="about-why-oval-frame">
               <img
                 src={whyLiora.image}
                 alt="Liora Radiant Skin & Aesthetic Care"
@@ -48,10 +48,11 @@ export default function AboutWhyLiora() {
                       aria-expanded={isOpen}
                     >
                       <span className="about-accordion-heading">{item.title}</span>
-                      <ChevronDown
-                        size={18}
-                        className={`about-accordion-icon ${isOpen ? 'rotated' : ''}`}
-                      />
+                      {isOpen ? (
+                        <ChevronUp size={24} className="about-accordion-icon" />
+                      ) : (
+                        <ChevronDown size={24} className="about-accordion-icon" />
+                      )}
                     </button>
 
                     <div

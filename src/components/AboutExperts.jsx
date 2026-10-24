@@ -16,7 +16,7 @@ export default function AboutExperts() {
         <div className="about-experts-grid">
           {experts.team.map((member) => (
             <div key={member.id} className="about-expert-card">
-              {/* Arched Portrait Frame */}
+              {/* Portrait Photo */}
               <div className="about-expert-photo-frame">
                 <img
                   src={member.image}

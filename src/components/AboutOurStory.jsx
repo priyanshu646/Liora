@@ -10,13 +10,13 @@ export default function AboutOurStory() {
         <div className="about-story-grid">
           {/* Left Text Column */}
           <div className="about-story-content">
-            <h2 className="about-story-title">{ourStory.title}</h2>
+            <h2 className="about-story-title italic-serif">{ourStory.title}</h2>
             <p className="about-story-text">{ourStory.paragraph}</p>
           </div>
 
-          {/* Right Arched Reception Photo */}
+          {/* Right Reception Photo */}
           <div className="about-story-media">
-            <div className="about-story-arch-frame">
+            <div className="about-story-image-wrap">
               <img
                 src={ourStory.image}
                 alt="Liora Luxee Wellness Reception Suite"

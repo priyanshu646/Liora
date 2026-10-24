@@ -7,8 +7,8 @@ import AboutOurValues from './AboutOurValues';
 import AboutMissionVision from './AboutMissionVision';
 import AboutInteriorGallery from './AboutInteriorGallery';
 import AboutExperts from './AboutExperts';
-import SanctuaryBanner from './SanctuaryBanner';
-import ExperienceBanner from './ExperienceBanner';
+import AboutSanctuary from './AboutSanctuary';
+import AboutExperience from './AboutExperience';
 
 export default function AboutPage({ onOpenBooking }) {
   return (
@@ -37,11 +37,11 @@ export default function AboutPage({ onOpenBooking }) {
       {/* 8. Skilled Experts Team Section */}
       <AboutExperts />
 
-      {/* 9. Sanctuary Banner */}
-      <SanctuaryBanner onOpenBooking={onOpenBooking} />
+      {/* 9. Sanctuary Banner ("A moment to pause. A ritual to restore.") */}
+      <AboutSanctuary onOpenBooking={onOpenBooking} />
 
-      {/* 10. Pre-Footer Experience Banner */}
-      <ExperienceBanner onOpenBooking={onOpenBooking} />
+      {/* 10. Pre-Footer Experience Banner ("Begin Your LIORA Experience") */}
+      <AboutExperience />
     </div>
   );
 }

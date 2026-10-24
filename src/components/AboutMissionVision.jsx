@@ -8,24 +8,24 @@ export default function AboutMissionVision() {
     <section className="about-mv-section" id="mission-vision">
       <div className="container about-mv-container">
         <div className="about-mv-grid">
-          {/* Left / Middle: Staggered Editorial Mission and Vision blocks */}
+          {/* Left Column: Mission & Vision */}
           <div className="about-mv-text-column">
             {/* Mission Block */}
             <div className="about-mv-block about-mission-block">
-              <h2 className="about-mv-title">{missionVision.mission.title}</h2>
+              <h2 className="about-mv-title italic-serif">{missionVision.mission.title}</h2>
               <p className="about-mv-paragraph">{missionVision.mission.text}</p>
             </div>
 
-            {/* Vision Block (staggered slightly to the right & down) */}
+            {/* Vision Block */}
             <div className="about-mv-block about-vision-block">
-              <h2 className="about-mv-title">{missionVision.vision.title}</h2>
+              <h2 className="about-mv-title italic-serif">{missionVision.vision.title}</h2>
               <p className="about-mv-paragraph">{missionVision.vision.text}</p>
             </div>
           </div>
 
-          {/* Right: Arched Portrait */}
+          {/* Right Column: Oval Portrait */}
           <div className="about-mv-media-column">
-            <div className="about-mv-arch-frame">
+            <div className="about-mv-oval-frame">
               <img
                 src={missionVision.image}
                 alt="Liora Mission and Vision for Radiant Skin"

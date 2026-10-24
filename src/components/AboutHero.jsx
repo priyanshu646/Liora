@@ -14,18 +14,6 @@ export default function AboutHero() {
             <span className="about-hero-line2 italic-serif">{hero.line2}</span>
           </h1>
         </div>
-
-        {/* Right Arched Visual Block */}
-        <div className="about-hero-image-wrap">
-          <div className="about-hero-arch-frame">
-            <img
-              src={hero.image}
-              alt="Liora Luxury Radiance & Peace"
-              className="about-hero-img"
-              loading="eager"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
