@@ -51,8 +51,13 @@ export default function Footer({ onNavigate }) {
         {/* Left Column: Brand & Details */}
         <div className="footer-brand-col">
           <div className="footer-logo">
-            <span className="footer-logo-title">{footer.brand}</span>
-            <span className="footer-logo-subtitle">{footer.brandSub}</span>
+            <a href="#home" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('home'); }} className="footer-logo-link" aria-label="LIORA Luxee Wellness Home">
+              <img
+                src="/assets/Liora wellness logo.png"
+                alt="LIORA LUXEE WELLNESS"
+                className="footer-logo-image"
+              />
+            </a>
           </div>
 
           <div className="footer-contact-list">

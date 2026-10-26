@@ -52,9 +52,13 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
   return (
     <header className={`navbar-header ${currentPage === 'contact' ? 'contact-navbar-header' : ''} ${currentPage === 'about' ? 'about-navbar-header' : ''} ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        {/* Brand Logo - clean "LIORA" as in PDF header */}
-        <a href="#home" onClick={handleLogoClick} className="navbar-logo">
-          <span className="navbar-brand-name">LIORA</span>
+        {/* Brand Logo */}
+        <a href="#home" onClick={handleLogoClick} className="navbar-logo" aria-label="LIORA Luxee Wellness Home">
+          <img
+            src="/assets/Liora wellness logo.png"
+            alt="LIORA LUXEE WELLNESS"
+            className="navbar-logo-image"
+          />
         </a>
 
         {/* Right side group: Nav links + Book Consultation button */}
