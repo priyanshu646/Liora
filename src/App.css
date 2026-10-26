@@ -195,16 +195,17 @@
 }
 
 .hero-text-block {
-  max-width: 520px;
+  max-width: 700px;
 }
 
 .hero-eyebrow {
-  font-family: var(--font-sans);
-  font-size: var(--fs-subtitle-1);
-  font-weight: var(--fw-subtitle-1);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-h1);
+  font-style: normal;
   color: var(--color-olive-dark);
   line-height: 1.15;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0;
 }
 
 .hero-title {
@@ -224,10 +225,11 @@
 .hero-clinic-name {
   font-family: var(--font-serif);
   font-size: var(--fs-h1);
-  font-weight: var(--fw-h1);
-  color: var(--color-olive-dark);
+  font-weight: 700;
+  font-style: italic;
+  color: #0C594B;
   line-height: 1.15;
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
 }
 
 /* ==========================================================================

@@ -14,7 +14,7 @@ export const clinicData = {
 
   hero: {
     eyebrow: "Rediscover your",
-    highlight: "Radience & Peace at",
+    highlight: "Radiance & Peace at", 
     clinicName: "Liora Luxee Wellness",
     ctaText: "Book Consultation",
     image: "/assets/pdf_img_10_2556x3194.jpeg",
