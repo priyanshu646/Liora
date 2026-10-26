@@ -27,11 +27,11 @@
   justify-content: space-between;
 }
 
-.navbar-header.contact-navbar-header .navbar-container {
+/*.navbar-header.contact-navbar-header .navbar-container {
   max-width: none;
   padding-left: 6.3%;
   padding-right: 6.3%;
-}
+}*/
 
 .navbar-logo {
   text-decoration: none;
@@ -68,6 +68,19 @@
 
 .navbar-link:hover {
   color: #0C594B;
+}
+
+.navbar-link.home-nav-active,
+.navbar-link.about-nav-active,
+.navbar-link.services-nav-active,
+.navbar-link.contact-nav-active,
+.mobile-nav-link.home-nav-active,
+.mobile-nav-link.about-nav-active,
+.mobile-nav-link.services-nav-active,
+.mobile-nav-link.contact-nav-active {
+  color: #0C594B;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .navbar-cta-btn {
@@ -1019,7 +1032,7 @@
    ========================================================================== */
 
 /* Navbar Active States */
-.navbar-link.contact-nav-active,
+/*.navbar-link.contact-nav-active,
 .mobile-nav-link.contact-nav-active {
   font-family: var(--font-sans);
   font-weight: 600;
@@ -1030,7 +1043,7 @@
 .navbar-link.home-nav-active {
   color: #0C594B;
   font-weight: 500;
-}
+}*/
 
 /* --- Section 1: Contact Hero --- */
 .contact-hero-section {
@@ -1096,10 +1109,9 @@
 .contact-hero-image-wrapper {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 40px;          /* starts below the navbar */
   bottom: 0;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1111,8 +1123,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center top;
   display: block;
+  /* soft fade at the top so there's no hard edge */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 70px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 70px);
 }
 
 /* --- Section 2: Have questions? Chat with our team & Form --- */
@@ -2559,13 +2574,13 @@
    ========================================================================== */
 
 /* Active nav link for About */
-.navbar-link.about-nav-active,
+/*.navbar-link.about-nav-active,
 .mobile-nav-link.about-nav-active {
   font-family: var(--font-sans);
   font-weight: 500;
   font-style: italic;
   color: #000000 !important;
-}
+}*/
 
 .navbar-header.about-navbar-header .navbar-container {
   max-width: 1280px;
