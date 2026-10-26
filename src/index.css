@@ -19,9 +19,49 @@
   --color-btn-taupe: #8D7B6D;
   --color-btn-taupe-hover: #7D6B5D;
 
-  /* Fonts */
-  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Fonts - Exact to PDF Typography Specification */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typography Scale Tokens from PDF Table */
+  --fs-h1: clamp(48px, 5vw, 64px);
+  --fw-h1: 400;
+
+  --fs-h2: 48px;
+  --fw-h2: 600;
+
+  --fs-h3: 32px;
+  --fw-h3: 500;
+
+  --fs-h4: 32px;
+  --fw-h4: 600;
+
+  --fs-h5: 24px;
+  --fw-h5: 600;
+
+  --fs-h6: 20px;
+  --fw-h6: 600;
+
+  --fs-subtitle-1: 20px;
+  --fw-subtitle-1: 600;
+
+  --fs-subtitle-2: 16px;
+  --fw-subtitle-2: 500;
+
+  --fs-body-1: 20px;
+  --fw-body-1: 400;
+
+  --fs-body-2: 15px;
+  --fw-body-2: 400;
+
+  --fs-button: 14px;
+  --fw-button: 400;
+
+  --fs-caption: 12px;
+  --fw-caption: 400;
+
+  --fs-mini: 10px;
+  --fw-mini: 400;
 
   /* Spacings & Container */
   --container-max: 1180px;
@@ -48,6 +88,57 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-primary);
   line-height: 1.6;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-2);
+  font-weight: var(--fw-body-2);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-h1);
+  font-style: normal;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-h2);
+  font-style: italic;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-h3);
+  font-style: italic;
+}
+
+h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-h4);
+  font-style: normal;
+}
+
+h5 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-h5);
+  font-style: normal;
+}
+
+h6 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-h6);
+  font-style: normal;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body-2);
+  font-weight: var(--fw-body-2);
 }
 
 img {
@@ -63,7 +154,9 @@ a {
 }
 
 button {
-  font-family: inherit;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-button);
   border: none;
   background: none;
   cursor: pointer;
@@ -89,19 +182,19 @@ button {
 /* Common Section Badges and Headings in Olive Green */
 .section-badge-olive {
   display: inline-block;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-subtitle-1);
+  font-weight: var(--fw-subtitle-1);
   color: var(--color-olive-dark);
-  font-weight: 500;
   margin-bottom: 0.4rem;
 }
 
 .section-heading-olive {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-size: var(--fs-h2);
   color: var(--color-olive-dark);
-  font-weight: 500;
+  font-weight: var(--fw-h2);
   line-height: 1.2;
 }
 
@@ -114,8 +207,9 @@ button {
   color: #FFFFFF;
   padding: 0.65rem 1.65rem;
   border-radius: 9999px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-button);
   letter-spacing: 0.02em;
   transition: background-color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
@@ -134,8 +228,9 @@ button {
   color: #FFFFFF;
   padding: 0.5rem 1.75rem;
   border-radius: 9999px;
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-button);
 }
 
 .btn-find-more:hover {
