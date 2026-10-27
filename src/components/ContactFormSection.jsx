@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { clinicData } from '../data/clinicData';
-import { CheckCircle2, Send } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function ContactFormSection() {
   const { chat } = clinicData.contactPage;
@@ -15,18 +15,32 @@ export default function ContactFormSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
+    setSubmitted(false);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Unable to send your message. Please try again.');
+      }
+
       setSubmitted(true);
       setFormData({
         name: '',
@@ -35,8 +49,15 @@ export default function ContactFormSection() {
         phone: '',
         message: '',
       });
-      setTimeout(() => setSubmitted(false), 6000);
-    }, 700);
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : 'Unable to send your message. Please try again.',
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,9 +72,14 @@ export default function ContactFormSection() {
         {/* Right: Contact Form */}
         <div className="contact-form-col">
           {submitted && (
-            <div className="contact-form-success-banner" role="alert">
+            <div className="contact-form-success-banner" role="status">
               <CheckCircle2 size={18} />
-              <span>Thank you! Your message has been received. Our wellness team will contact you shortly.</span>
+              <span>Thank you! Your message has been sent to our wellness team. We will contact you shortly.</span>
+            </div>
+          )}
+          {error && (
+            <div className="contact-form-error-banner" role="alert">
+              <span>{error}</span>
             </div>
           )}
 

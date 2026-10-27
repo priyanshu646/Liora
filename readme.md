@@ -1,16 +1,36 @@
-# React + Vite
+# Liora Luxee Wellness
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Run locally
 
-Currently, two official plugins are available:
+Use Node.js 20.6 or newer. Install the project dependencies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm ci
+```
 
-## React Compiler
+### Configure email
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Copy `backend/.env.example` to `backend/.env` and enter the SMTP settings for the mailbox that will send contact messages. For Gmail, use an app password rather than your regular account password. Keep `backend/.env` private; it is excluded from Git.
 
-## Expanding the Oxlint configuration
+The contact form delivers messages to `info@lioraluxeewellness.com` by default. Change `CONTACT_TO` in `backend/.env` if the company wants to use a different inbox.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Start the app
+
+Open two terminals in the project folder:
+
+```sh
+npm run dev:backend
+```
+
+```sh
+npm run dev
+```
+
+Open the frontend at [http://localhost:5173](http://localhost:5173). Vite forwards `/api` requests to the backend on port 3001. The backend accepts and emails the form submission only when valid SMTP settings are configured.
+
+For production, deploy the backend as a separate Node.js service and configure the web server or hosting platform to forward `/api/contact` requests to it. If that proxy is on a different host, set `HOST=0.0.0.0` and restrict backend access to the trusted proxy. Set `TRUST_PROXY=true` only when the backend is reachable exclusively through a trusted proxy that sets `X-Forwarded-For`. Do not expose SMTP credentials in frontend code or commit them to the repository.
+
+## Other commands
+
+- `npm run build` — build the frontend for production.
+- `npm run lint` — lint the frontend source.
