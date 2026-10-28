@@ -170,7 +170,7 @@
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: #E6D8CC;
   overflow: hidden;
 }
@@ -191,15 +191,14 @@
   object-position: center right;
 }
 
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(230, 216, 204, 0.98) 0%,
-    rgba(230, 216, 204, 0.92) 35%,
-    rgba(230, 216, 204, 0.45) 60%,
-    rgba(230, 216, 204, 0.1) 100%
+    rgba(230, 216, 204, 0.25) 0%,
+    rgba(230, 216, 204, 0) 50%
   );
 }
 
@@ -219,7 +218,7 @@
   z-index: 2;
   width: 100%;
   padding-top: 7rem;
-  padding-bottom: 5rem;
+  padding-bottom: clamp(3rem, 10vh, 6rem);
 }
 
 .hero-text-block {
@@ -231,7 +230,7 @@
   font-size: var(--fs-h1);
   font-weight: var(--fw-h1);
   font-style: normal;
-  color: var(--color-olive-dark);
+  color: #492A18;
   line-height: 1.15;
   margin-bottom: 0;
 }
@@ -246,7 +245,7 @@
   font-size: var(--fs-h1);
   font-weight: var(--fw-h1);
   font-style: normal;
-  color: var(--color-olive-dark);
+  color: #492A18;
   line-height: 1.1;
 }
 
@@ -361,9 +360,9 @@
 .philosophy-card-title {
   font-family: var(--font-serif);
   font-size: var(--fs-h3);
-  font-weight: var(--fw-h3);
-  font-style: italic;
-  color: #201D1A;
+  font-weight: bold;
+  font-style: normal;
+  color: #543733;
   margin-bottom: 1.25rem;
 }
 
@@ -2557,6 +2556,7 @@
   .services-carousel-track {
     gap: 0.75rem;
 }
+
 
   .services-carousel-slide {
     flex-basis: calc((100% - 0.75rem) / 2);
