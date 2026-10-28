@@ -62,6 +62,9 @@ export default function BookingModal({ isOpen, onClose }) {
                   type="text"
                   required
                   placeholder="e.g. Natasha Kapoor"
+                  pattern="[A-Za-z]+( [A-Za-z]+)*"
+                  title="Use letters only, with spaces between names."
+                  maxLength={80}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="form-input"
@@ -76,9 +79,15 @@ export default function BookingModal({ isOpen, onClose }) {
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder="phone number"
+                    inputMode="numeric"
+                    pattern="[0-9]{10}"
+                    title="Enter exactly 10 digits."
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) => setFormData({
+                      ...formData,
+                      phone: e.target.value.replace(/\D/g, '').slice(0, 10),
+                    })}
                     className="form-input"
                   />
                 </div>

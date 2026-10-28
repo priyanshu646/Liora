@@ -125,16 +125,13 @@ function getContactDetails(body) {
   }
 
   if (
-    details.name.length < 1
+    !/^[A-Za-z]+$/.test(details.name)
     || details.name.length > 80
-    || details.surname.length < 1
+    || !/^[A-Za-z]+$/.test(details.surname)
     || details.surname.length > 80
     || details.email.length > 254
     || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(details.email)
-    || details.phone.length < 5
-    || details.phone.length > 30
-    || !/^[+()\d\s.-]+$/.test(details.phone)
-    || (details.phone.match(/\d/g) || []).length < 5
+    || !/^\d{10}$/.test(details.phone)
     || details.message.length < 1
     || details.message.length > 5000
   ) {
