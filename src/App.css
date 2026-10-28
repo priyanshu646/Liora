@@ -281,18 +281,18 @@
 
 .arched-image-frame {
   width: 100%;
-  max-width: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 330px;
+  height: 440px;
+  border-radius: 165px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(60, 45, 30, 0.08);
 }
 
 .arched-portrait-img {
   width: 100%;
-  height: auto;
-  max-height: 480px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 30px rgba(60, 45, 30, 0.08));
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .who-content-column {
@@ -358,11 +358,11 @@
 }
 
 .philosophy-card-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: var(--fs-h3);
-  font-weight: bold;
-  font-style: normal;
-  color: #543733;
+  font-weight: var(--fw-h3);
+  font-style: semi-bold;
+  color: #201D1A;
   margin-bottom: 1.25rem;
 }
 
@@ -486,7 +486,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(40, 30, 20, 0.06);
-  background-color: transparent;
+  background-color: #EAE0D5;
 }
 
 .gallery-card-image {
@@ -758,12 +758,9 @@
   pointer-events: none;
 }
 
-.watermark-svg,
-.watermark-img {
+.watermark-svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom right;
 }
 
 .footer-container {
@@ -2635,7 +2632,7 @@
    ========================================================================== */
 .about-hero-section {
   position: relative;
-  background: #DFDCE3 url('/assests/Landing page image 2.png') no-repeat right bottom / cover;
+  background: #DFDCE3 url('/assets/about/exact_hero_bg_clean.png') no-repeat right bottom / cover;
   min-height: 800px;
   height: 65vw;
   max-height: 835px;
