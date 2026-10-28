@@ -50,7 +50,7 @@ export const clinicData = {
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
     ],
-    ctaText: "Find more",
+    ctaText: "Know more",
   },
 
   whatWeDo: {
@@ -128,6 +128,38 @@ export const clinicData = {
   testimonials: {
     badge: "Testimonials",
     title: "What our\nclients say",
+    items: [
+      {
+        id: 1,
+        quote:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        author: "NAME",
+      },
+      {
+        id: 2,
+        quote:
+          "My skin has transformed completely since starting my bespoke clinical protocol at LIORA. The bespoke treatments and serene sanctuary setting create an experience like no other.",
+        author: "PRIYA SHARMA",
+      },
+      {
+        id: 3,
+        quote:
+          "The medical precision combined with pure luxury made all the difference. The attention to detail from the doctors and concierge team at Defence Colony is unmatched.",
+        author: "ANANYA VERMA",
+      },
+      {
+        id: 4,
+        quote:
+          "From the consultation suite to the final post-treatment care, every step was tailored to my sensitive skin. Truly radiant results and unparalleled peace of mind.",
+        author: "ROHIT MEHTA",
+      },
+      {
+        id: 5,
+        quote:
+          "LIORA redefines modern self-care. The clinical technology is world-class, and the atmosphere feels like a high-end European sanctuary.",
+        author: "SIMRAN KAUR",
+      },
+    ],
     quote:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
     author: "NAME",
@@ -168,7 +200,7 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/contact/contact_hero_wide.jpg",
+      image: "/assests/landing page contact us.png",
     },
     chat: {
       eyebrow: "Have questions?",
@@ -192,7 +224,7 @@ export const clinicData = {
     faqs: {
       eyebrow: "FAQs",
       title: "Immerse yourself in luxury",
-      image: "/assets/contact/faq_illustration.png",
+      image: "/assests/FAQs img.png",
       items: [
         {
           id: 1,
@@ -808,7 +840,7 @@ export const clinicData = {
     whyLiora: {
       eyebrow: "Why Liora?",
       title: "Lorem ipsum dolor sit amet",
-      image: "/assets/about/exact_why_liora_oval.png",
+      image: "/assests/why liora img.png",
       accordion: [
         {
           id: 1,
@@ -867,7 +899,7 @@ export const clinicData = {
         title: "Vision",
         text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
       },
-      image: "/assets/about/exact_mission_vision_oval.png",
+      image: "/assests/mission img.png",
     },
     interiorGallery: [
       {
