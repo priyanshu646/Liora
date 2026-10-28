@@ -17,14 +17,14 @@ export const clinicData = {
     highlight: "Radiance & Peace at", 
     clinicName: "Liora Luxee Wellness",
     ctaText: "Book Consultation",
-    image: "/assets/pdf_img_10_2556x3194.jpeg",
+    image: "/assests/Home page image.png",
   },
 
   whoWeAre: {
     title: "Who We Are",
     paragraph:
       "Liora Luxee Wellness is a luxury dermatology clinic dedicated to advanced healthy, radiant skin care. Through advanced treatments & personalized care, we combine science and aesthetics to elevate skin wellness & confidence. The aim is to illuminate natural beauty & bring confidence that shines from within.",
-    image: "/assets/pdf_img_8_720x900.jpeg",
+    image: "/assests/image 1.png",
   },
 
   philosophy: {
@@ -95,33 +95,33 @@ export const clinicData = {
   gallery: [
     {
       id: 1,
-      image: "/assets/gallery_exact_1.png",
+      image: "/assests/Rectangle 4.png",
       alt: "Treatment suite with massage bed",
     },
     {
       id: 2,
-      image: "/assets/gallery_exact_2.png",
+      image: "/assests/Rectangle 5.png",
       alt: "Marble reception with illuminated LIORA sign",
     },
     {
       id: 3,
-      image: "/assets/gallery_exact_3.png",
-      alt: "Skincare bottles on travertine",
+      image: "/assests/Rectangle 8.png",
+      alt: "Lounge area and Caffeine & Kindness bar",
     },
     {
       id: 4,
-      image: "/assets/gallery_exact_4.png",
+      image: "/assests/Rectangle 6.png",
       alt: "Consultation lounge",
     },
     {
       id: 5,
-      image: "/assets/gallery_exact_5.png",
-      alt: "Warmly lit boutique display shelves",
+      image: "/assests/Rectangle 7.png",
+      alt: "Warmly lit boutique display shelves and treatment suite",
     },
     {
       id: 6,
-      image: "/assets/gallery_exact_6.png",
-      alt: "Lush plant wall with backlit LIORA sign",
+      image: "/assests/Rectangle 9.png",
+      alt: "Wood-fluted wall with 3D LIORA emblem",
     },
   ],
 
@@ -139,6 +139,7 @@ export const clinicData = {
     subtitle:
       "Book your session  and let our amazing experience be your sanctuary for a balanced life.",
     ctaText: "Book Consultation",
+    backgroundImage: "/assests/booking bg with icon.png",
   },
 
   experience: {
@@ -243,7 +244,7 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/services/services_hero_clean.jpg",
+      image: "/assests/landing pg img.png",
     },
     header: {
       subtitle: "Our Services",
@@ -792,9 +793,9 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/about/exact_hero_model.png",
-      bgImage: "/assets/about/exact_hero_bg_clean.png",
-      fullBanner: "/assets/about/exact_hero_banner.png",
+      image: "/assests/Landing page image 2.png",
+      bgImage: "/assests/Landing page image 2.png",
+      fullBanner: "/assests/Landing page image 2.png",
     },
     introQuote: {
       text: "LIORA was born from a simple belief true luxury is not only about how you look, but how you feel. Created to redefine modern self-care, LIORA brings together advanced wellness, beauty, aesthetics, & exceptional experiences under one distinctive vision. Inspired by the Hebrew name Liora, meaning “my light” or “God’s light,” LIORA represents radiance, renewal, & inner grace.",
@@ -802,7 +803,7 @@ export const clinicData = {
     ourStory: {
       title: "Our Story",
       paragraph: "Liora Luxee Wellness was created to bring together advanced dermatology and refined wellness. Built on the belief that healthy skin enhances confidence & well-being, Liora offers science-driven treatments in a calm, luxurious environment. By combining medical expertise with personalized care, we focus on restoring, rejuvenating, and enhancing natural skin health.",
-      image: "/assets/about/exact_story_reception_perfect.png",
+      image: "/assests/Image story.png",
     },
     whyLiora: {
       eyebrow: "Why Liora?",
@@ -892,12 +893,6 @@ export const clinicData = {
         image: "/assets/pdf_img_1_1297x814.jpeg",
         title: "Architectural Wood-Fluted LIORA Wall",
         alt: "Illuminated LIORA emblem on natural wood-fluted wall",
-      },
-      {
-        id: 5,
-        image: "/assets/gallery_exact_2.png",
-        title: "Liora Grand Travertine Lobby",
-        alt: "Travertine and fluted oak reception greeting guests",
       },
     ],
     experts: {

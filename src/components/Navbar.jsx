@@ -55,7 +55,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
         {/* Brand Logo */}
         <a href="#home" onClick={handleLogoClick} className="navbar-logo" aria-label="LIORA Luxee Wellness Home">
           <img
-            src="/assets/Liora wellness logo.png"
+            src="/assests/Liora wellness logo.png"
             alt="LIORA LUXEE WELLNESS"
             className="navbar-logo-image"
           />

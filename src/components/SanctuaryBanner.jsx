@@ -9,7 +9,7 @@ export default function SanctuaryBanner({ onOpenBooking }) {
       {/* Exact PDF background pattern */}
       <div className="sanctuary-pattern-bg">
         <img
-          src="/assets/sanctuary_pattern.png"
+          src={sanctuary.backgroundImage || "/assests/booking bg with icon.png"}
           alt=""
           className="sanctuary-pattern-img"
           aria-hidden="true"
