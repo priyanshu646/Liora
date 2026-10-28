@@ -1221,6 +1221,19 @@
   animation: fadeIn 0.3s ease;
 }
 
+.contact-form-error-banner {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-caption);
+  background-color: #FDECEA;
+  color: #8A1C13;
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #F5C6C2;
+  animation: fadeIn 0.3s ease;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
