@@ -2883,9 +2883,10 @@
 .about-hero-section {
   position: relative;
   background: #DFDCE3 url('/assests/Landing page image 2.png') no-repeat right bottom / cover;
-  min-height: 800px;
-  height: 65vw;
-  max-height: 835px;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
   border-radius: 0 0 40px 40px;
   overflow: hidden;
   display: flex;
@@ -3773,9 +3774,10 @@
 /* Keep the hero close to the Figma proportions instead of letting it grow
    excessively tall on wide screens. */
 .about-hero-section {
-  height: clamp(620px, 68vw, 780px);
-  min-height: 0;
-  max-height: 780px;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
   background-color: #E7E4E9;
   background-position: right bottom;
   background-size: cover;
@@ -3899,9 +3901,10 @@
 
 /* FINAL FIX: About page hero typography and positioning to match the Figma reference */
 .about-hero-section {
-  height: min(94vh, 780px);
-  min-height: 720px;
-  max-height: 780px;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
   background-color: #E7E4E9;
   background-position: center center;
   background-size: cover;
@@ -3946,8 +3949,10 @@
 
 @media (max-width: 1024px) {
   .about-hero-section {
-    height: 90vh;
-    min-height: 600px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
     background-position: 58% center;
   }
 
