@@ -2796,16 +2796,21 @@
 
 .talk-pill-btn {
   font-family: var(--font-sans);
-  font-size: var(--fs-button);
+  font-size: 12px;
   font-weight: var(--fw-button);
   display: flex;
-  min-height: 3rem;
+  min-height: 2.35rem;
   align-items: center;
-  padding: 0.65rem 1.1rem;
+  padding: 0.45rem 0.85rem;
   border: 1px solid #C6AB97;
   border-radius: 999px;
   background: #E2D5CB;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
+}
+
+.talk-pill-email {
+  font-size: 11.5px;
+  letter-spacing: -0.01em;
 }
 
 .talk-pill-btn:hover {
