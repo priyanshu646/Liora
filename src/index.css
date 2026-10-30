@@ -1,4 +1,4 @@
-/* LIORA LUXEE WELLNESS - Global Design Tokens from Figma Style Guide */
+﻿/* LIORA LUXEE WELLNESS - Global Design Tokens from Figma Style Guide */
 :root {
   /* Brand Palette - Exact match to Figma Style Guide (Slide 16:9 - 1) */
   --color-primary-green: #0c594b; /* Swatch 1 - Dark Teal / Forest Green */
@@ -93,6 +93,7 @@ html {
   color: var(--color-text-main);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
@@ -246,29 +247,27 @@ button {
   font-family: var(--font-sans);
   font-size: var(--fs-button);
   font-weight: 500;
-  letter-spacing: 0.02em;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0px 40px 30px -40px #E6E6E6 inset,
-              0px -40px 10px -40px #282828 inset,
-              0px 40px 10px -40px #282828 inset,
-              0 4px 14px rgba(12, 89, 75, 0.3);
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4),
+              inset 0 -1px 1px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: all var(--transition-smooth);
+  transition: none;
+  transform: none;
 }
 
 .btn-primary:hover,
 .btn-primary-green:hover,
 .btn-book-consultation:hover,
 .btn-book-appointment:hover {
-  background-color: #084338;
-  border-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 40px 30px -40px #E6E6E6 inset,
-              0px -40px 10px -40px #282828 inset,
-              0px 40px 10px -40px #282828 inset,
-              0 6px 20px rgba(12, 89, 75, 0.45);
-  transform: translateY(-1.5px);
+  background-color: #0c594b;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4),
+              inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+  transform: none;
+  cursor: pointer;
 }
 
 /* Secondary Clay Brown Pill Buttons ("Know more", "Submit", "Book consultation") */

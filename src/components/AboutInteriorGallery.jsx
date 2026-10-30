@@ -80,7 +80,7 @@ export default function AboutInteriorGallery() {
           aria-label="Next interior slide"
         >
           <svg
-            className="gallery-chevron-svg gallery-chevron-big"
+            className="gallery-chevron-svg gallery-chevron-small"
             viewBox="0 0 10 18"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

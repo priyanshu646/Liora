@@ -16,8 +16,8 @@ import ServicesPage from './components/ServicesPage';
 import AboutPage from './components/AboutPage';
 
 export default function App() {
-  // Defaults to 'about' page as requested by user
-  const [currentPage, setCurrentPage] = useState('about');
+  // Defaults to 'home' page
+  const [currentPage, setCurrentPage] = useState('home');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
