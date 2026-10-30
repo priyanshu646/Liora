@@ -7,6 +7,7 @@
     "dev": "vite",
     "dev:backend": "node --env-file=backend/.env backend/server.js",
     "build": "vite build",
+    "start": "npm run build && node backend/server.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },

@@ -1,8 +1,20 @@
 import { createServer } from 'node:http';
+import { loadEnvFile } from 'node:process';
+import { readFile } from 'node:fs/promises';
+import { extname, isAbsolute, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import nodemailer from 'nodemailer';
 
+try {
+  loadEnvFile(new URL('./.env', import.meta.url));
+} catch (error) {
+  if (error.code !== 'ENOENT') {
+    throw error;
+  }
+}
+
 const port = Number(process.env.PORT || 3001);
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || '0.0.0.0';
 const smtpPort = Number(process.env.SMTP_PORT || 587);
 const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
@@ -13,6 +25,19 @@ const maxBodyBytes = 8 * 1024;
 const rateLimitWindowMs = 15 * 60 * 1000;
 const maxRequestsPerWindow = 5;
 const requestsByAddress = new Map();
+const frontendDirectory = resolve(fileURLToPath(new URL('..', import.meta.url)), 'dist');
+const contentTypes = {
+  '.css': 'text/css; charset=utf-8',
+  '.html': 'text/html; charset=utf-8',
+  '.ico': 'image/x-icon',
+  '.jpeg': 'image/jpeg',
+  '.jpg': 'image/jpeg',
+  '.js': 'text/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.webp': 'image/webp',
+};
 
 if (!process.env.SMTP_HOST || !smtpUser || !smtpPass || !contactSender) {
   console.error('Missing SMTP configuration. Copy backend/.env.example to backend/.env and fill in the SMTP settings.');
@@ -151,11 +176,72 @@ function escapeHtml(value) {
   })[character]);
 }
 
+async function serveFrontend(request, response, pathname) {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    response.setHeader('Allow', 'GET, HEAD');
+    sendJson(response, 405, { error: 'Method not allowed.' });
+    return;
+  }
+
+  let decodedPath;
+  try {
+    decodedPath = decodeURIComponent(pathname);
+  } catch {
+    sendJson(response, 400, { error: 'Invalid URL path.' });
+    return;
+  }
+
+  const requestedFile = resolve(frontendDirectory, `.${decodedPath}`);
+  const relativePath = relative(frontendDirectory, requestedFile);
+  if (relativePath.startsWith('..') || isAbsolute(relativePath)) {
+    console.error('Rejected frontend path outside build directory.', { pathname, relativePath });
+    sendJson(response, 404, { error: 'Not found.' });
+    return;
+  }
+
+  const isAppRoute = decodedPath === '/' || extname(decodedPath) === '';
+  let filePath = requestedFile;
+  try {
+    let file;
+    try {
+      file = await readFile(filePath);
+    } catch (error) {
+      if (!isAppRoute || (error.code !== 'ENOENT' && error.code !== 'EISDIR')) {
+        throw error;
+      }
+      filePath = resolve(frontendDirectory, 'index.html');
+      file = await readFile(filePath);
+    }
+
+    response.writeHead(200, {
+      'Content-Type': contentTypes[extname(filePath).toLowerCase()] || 'application/octet-stream',
+      'Cache-Control': filePath === resolve(frontendDirectory, 'index.html')
+        ? 'no-cache'
+        : 'public, max-age=3600',
+      'X-Content-Type-Options': 'nosniff',
+    });
+    response.end(request.method === 'HEAD' ? undefined : file);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      response.writeHead(404, { 'Cache-Control': 'no-store' });
+      response.end('Not found.');
+      return;
+    }
+    console.error('Frontend asset request failed:', error.message);
+    response.writeHead(500, { 'Cache-Control': 'no-store' });
+    response.end('Unable to serve the frontend.');
+  }
+}
+
 const server = createServer(async (request, response) => {
   const pathname = new URL(request.url, 'http://localhost').pathname;
 
   if (pathname !== '/api/contact') {
-    sendJson(response, 404, { error: 'Not found.' });
+    if (pathname.startsWith('/api/')) {
+      sendJson(response, 404, { error: 'Not found.' });
+      return;
+    }
+    await serveFrontend(request, response, pathname);
     return;
   }
 
@@ -285,5 +371,6 @@ server.on('error', (error) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Contact backend listening at http://${host}:${port}`);
+  console.log(`Liora app listening at http://${host}:${port}`);
+  console.log(`Serving frontend files from ${frontendDirectory}`);
 });
