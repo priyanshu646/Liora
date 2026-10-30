@@ -86,7 +86,7 @@ export default function ContactFormSection() {
           {submitted && (
             <div className="contact-form-success-banner" role="status">
               <CheckCircle2 size={18} />
-              <span>Thank you! Your message has been sent to our wellness team. We will contact you shortly.</span>
+              <span>Thank you! Your message has been submitted. Our wellness team will contact you shortly.</span>
             </div>
           )}
           {error && (

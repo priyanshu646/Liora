@@ -189,7 +189,7 @@ const server = createServer(async (request, response) => {
     const safePhone = escapeHtml(details.phone);
     const safeMessage = escapeHtml(details.message);
 
-    await mailer.sendMail({
+    const delivery = await mailer.sendMail({
       from: contactSender,
       to: contactRecipient,
       replyTo: details.email,
@@ -255,6 +255,15 @@ const server = createServer(async (request, response) => {
       `,
     });
 
+    if (!Array.isArray(delivery.accepted) || delivery.accepted.length === 0) {
+      console.error('Contact email was not accepted by the SMTP server.', {
+        rejectedRecipientCount: Array.isArray(delivery.rejected) ? delivery.rejected.length : 0,
+      });
+      sendJson(response, 502, { error: 'The email service could not accept your message. Please try again later.' });
+      return;
+    }
+
+    console.info('Contact email accepted by the SMTP server.', { messageId: delivery.messageId });
     sendJson(response, 200, { message: 'Your message has been sent.' });
   } catch (error) {
     if (error instanceof RequestError) {
