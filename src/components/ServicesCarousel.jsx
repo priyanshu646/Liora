@@ -26,38 +26,8 @@ export default function ServicesCarousel({ category, onOpenBooking }) {
     track.addEventListener('scroll', checkScrollState, { passive: true });
     window.addEventListener('resize', checkScrollState);
 
-    let wheelTimeout = null;
-    // Convert vertical mouse wheel into horizontal scroll when over carousel
-    const handleWheel = (e) => {
-      if (track.scrollWidth <= track.clientWidth) return;
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        const { scrollLeft, scrollWidth, clientWidth } = track;
-        const atStart = scrollLeft <= 0 && e.deltaY < 0;
-        const atEnd = scrollLeft >= scrollWidth - clientWidth - 2 && e.deltaY > 0;
-        if (!atStart && !atEnd) {
-          e.preventDefault();
-          track.scrollLeft += e.deltaY;
-
-          clearTimeout(wheelTimeout);
-          wheelTimeout = setTimeout(() => {
-            if (!track) return;
-            const slide = track.querySelector('.services-carousel-slide');
-            if (slide) {
-              const gap = parseFloat(window.getComputedStyle(track).gap) || 36;
-              const cardStep = slide.offsetWidth + gap;
-              const targetIndex = Math.round(track.scrollLeft / cardStep);
-              track.scrollTo({ left: targetIndex * cardStep, behavior: 'smooth' });
-            }
-          }, 120);
-        }
-      }
-    };
-
-    track.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
-      clearTimeout(wheelTimeout);
       track.removeEventListener('scroll', checkScrollState);
-      track.removeEventListener('wheel', handleWheel);
       window.removeEventListener('resize', checkScrollState);
     };
   }, [checkScrollState, category.items]);
