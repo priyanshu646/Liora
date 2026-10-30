@@ -1,4 +1,4 @@
-/* App.css - Exact 1:1 Pixel Match with PDF Design */
+﻿/* App.css - Exact 1:1 Pixel Match with PDF Design */
 
 /* ==========================================================================
    1. NAVBAR
@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
   z-index: 100;
   background: transparent;
   backdrop-filter: none;
@@ -211,6 +212,7 @@
   background-color: #E6D8CC;
   border-radius: 0 0 40px 40px;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero-background-wrapper {
@@ -259,12 +261,14 @@
 }
 
 .hero-eyebrow {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
   font-style: normal;
-  color: #462918;
-  line-height: 1.15;
+  color: #492B19;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
   margin-bottom: 0;
 }
 
@@ -274,21 +278,25 @@
 }
 
 .hero-italic-highlight {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
   font-style: normal;
-  color: #462918;
-  line-height: 1.1;
+  color: #492B19;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
 }
 
 .hero-clinic-name {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
   font-weight: 600;
   font-style: italic;
   color: #0D574A;
-  line-height: 1.15;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
   margin-top: 0.25rem;
 }
 
@@ -964,15 +972,15 @@
   font-size: var(--fs-h2);
   font-weight: var(--fw-h2);
   font-style: italic;
-  color: #0D574A;
+  color: #0c594b;
   margin-bottom: 0.6rem;
 }
 
 .experience-subtitle {
   font-family: var(--font-sans);
   font-size: var(--fs-subtitle-2);
-  font-weight: var(--fw-subtitle-2);
-  color: #462918;
+  font-weight: 400;
+  color: #1e1e1e;
 }
 
 /* ==========================================================================
@@ -1315,59 +1323,18 @@
 /* --- Section 1: Contact Hero --- */
 .contact-hero-section {
   position: relative;
-  width: 100%;
-  background-color: #FAF8F5;
-  overflow: hidden;
-}
-
-.contact-hero-banner {
-  background: #EEEFEA;
+  width: 1520px;
+  max-width: 100%;
+  height: 780px;
+  margin: 0 auto;
+  opacity: 1;
+  transform: rotate(0deg);
+  display: flex;
+  align-items: flex-end;
+  background-color: #EEEFEA;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   overflow: hidden;
-  position: relative;
-  height: 100vh;
-  height: 100svh;
-}
-
-.contact-hero-container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1440px;
-  height: 100%;
-  padding: 0 6.3% 0;
-  position: relative;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.contact-hero-content {
-  position: relative;
-  z-index: 5;
-  width: min(48%, 560px);
-  max-width: 560px;
-  margin-bottom: clamp(3.5rem, 8vh, 7.5rem);
-  padding: 0;
-  pointer-events: auto;
-}
-
-.contact-hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.4vw, 4rem);
-  font-weight: 400;
-  color: #462918;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin: 0;
-}
-
-.contact-hero-line-1,
-.contact-hero-line-2 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  display: block;
 }
 
 .contact-hero-image-wrapper {
@@ -1386,14 +1353,68 @@
 }
 
 .contact-hero-face-img {
-  height: 100%;
+  height: calc(100% + 42px);
+  margin-top: -42px;
   width: auto;
   max-width: none;
   object-fit: contain;
   object-position: right bottom;
   display: block;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 30px, rgba(0, 0, 0, 0.85) 80px, #000000 150px);
-  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.3) 30px, rgba(0, 0, 0, 0.85) 80px, #000000 150px);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 40px, #000000 120px);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 40px, #000000 120px);
+}
+
+.contact-hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.contact-hero-content {
+  position: absolute;
+  top: 560px;
+  left: 80px;
+  width: 497px;
+  height: 110px;
+  opacity: 1;
+  transform: rotate(0deg);
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.contact-hero-title {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
+  margin: 0;
+  padding: 0;
+  width: 497px;
+  height: 110px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-hero-line-1,
+.contact-hero-line-2 {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
+  display: block;
 }
 
 /* --- Section 2: Have questions? Chat with our team & Form --- */
@@ -1416,9 +1437,9 @@
 .contact-chat-eyebrow {
   font-family: var(--font-sans);
   font-size: var(--fs-subtitle-1);
-  font-weight: var(--fw-subtitle-1);
+  font-weight: 400;
   display: block;
-  color: #462918;
+  color: #1e1e1e;
   margin-bottom: 0.4rem;
 }
 
@@ -1428,7 +1449,7 @@
   font-weight: var(--fw-h2);
   font-style: italic;
   color: #0D574A;
-  line-height: 1.12;
+  line-height: 1;
   margin: 0;
 }
 
@@ -1492,7 +1513,7 @@
   font-style: normal;
   width: 100%;
   border-radius: 9999px;
-  border: 1.2px solid #9B7E6F;
+  border: 1px solid #492b19;
   padding: 0.82rem 1.6rem;
   color: #462918;
   background-color: transparent;
@@ -1593,9 +1614,9 @@
 .contact-info-eyebrow {
   font-family: var(--font-sans);
   font-size: var(--fs-subtitle-1);
-  font-weight: var(--fw-subtitle-1);
+  font-weight: 400;
   display: block;
-  color: #462918;
+  color: #1e1e1e;
   margin-bottom: 0.4rem;
 }
 
@@ -1605,7 +1626,7 @@
   font-weight: var(--fw-h2);
   font-style: italic;
   color: #0D574A;
-  line-height: 1.12;
+  line-height: 1;
   margin: 0;
 }
 
@@ -1642,7 +1663,7 @@
   font-family: var(--font-sans);
   font-size: var(--fs-body-2);
   font-weight: var(--fw-body-2);
-  color: #5C4A40;
+  color: #1e1e1e;
   margin-bottom: 0.4rem;
 }
 
@@ -1651,7 +1672,7 @@
   font-family: var(--font-sans);
   font-size: var(--fs-h5);
   font-weight: var(--fw-h5);
-  color: #2D2019;
+  color: #492B19;
   word-break: break-word;
   line-height: 1.25;
 }
@@ -2036,9 +2057,9 @@
 .faq-eyebrow {
   font-family: var(--font-sans);
   font-size: var(--fs-subtitle-1);
-  font-weight: var(--fw-subtitle-1);
+  font-weight: 400;
   display: block;
-  color: #462918;
+  color: #1e1e1e;
   margin-bottom: 0.4rem;
 }
 
@@ -2047,8 +2068,8 @@
   font-size: var(--fs-h2);
   font-weight: var(--fw-h2);
   font-style: italic;
-  color: #0D574A;
-  line-height: 1.12;
+  color: #0c594b;
+  line-height: 1;
   margin: 0;
 }
 
@@ -2077,7 +2098,7 @@
   font-family: var(--font-sans);
   font-size: var(--fs-h4);
   font-weight: 600;
-  color: #462918;
+  color: #492B19;
   line-height: 1.2;
 }
 
@@ -2097,8 +2118,8 @@
   font-family: var(--font-sans);
   font-size: var(--fs-body-2);
   font-weight: var(--fw-body-2);
-  color: #462918;
-  line-height: 1.65;
+  color: #1e1e1e;
+  line-height: 1.3;
   max-width: 95%;
 }
 
@@ -2121,13 +2142,13 @@
 }
 
 .contact-card-box {
-  background-color: #ECEAE3;
-  border-radius: 36px;
+  background-color: #F8F6EE;
+  border-radius: 30px;
   padding: 3.5rem 3.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 250px;
+  min-height: 240px;
 }
 
 .dual-card-title {
@@ -2139,7 +2160,7 @@
   font-size: var(--fs-h3);
   font-weight: var(--fw-h3);
   font-style: italic;
-  color: #0D574A;
+  color: #0c594b;
   line-height: 1.1;
 }
 
@@ -2148,7 +2169,7 @@
   font-size: var(--fs-h3);
   font-weight: 600;
   font-style: normal;
-  color: #462918;
+  color: #492B19;
   line-height: 1.15;
 }
 
@@ -2156,8 +2177,8 @@
   font-family: var(--font-sans);
   font-size: var(--fs-body-2);
   font-weight: var(--fw-body-2);
-  color: #462918;
-  line-height: 1.55;
+  color: #1e1e1e;
+  line-height: 1.25;
   margin-bottom: 2rem;
   max-width: 90%;
 }
@@ -2256,7 +2277,7 @@
 }
 
 @media (max-width: 768px) {
-  .contact-hero-banner {
+  .contact-hero-section {
     height: 100vh;
     height: 100svh;
     border-bottom-left-radius: 28px;
@@ -2264,22 +2285,37 @@
   }
 
   .contact-hero-container {
-    padding: 90px 1.25rem 0;
+    position: relative;
+    padding: 90px 1.25rem clamp(2.5rem, 6vh, 4rem);
+    display: flex;
+    align-items: flex-end;
   }
 
   .contact-hero-content {
-    width: 75%;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
     max-width: 100%;
     margin-bottom: 0;
-    padding: 0.5rem 2rem 1.75rem 0;
-    background: linear-gradient(90deg,
-        rgba(238, 239, 234, 0.94) 0%,
-        rgba(238, 239, 234, 0.86) 62%,
-        rgba(238, 239, 234, 0) 100%);
+    padding: 0;
+    background: transparent;
   }
 
   .contact-hero-title {
-    font-size: 2.1rem;
+    width: 100%;
+    height: auto;
+    font-size: clamp(2rem, 7.5vw, 2.8rem);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+  }
+
+  .contact-hero-line-1,
+  .contact-hero-line-2 {
+    font-size: clamp(2rem, 7.5vw, 2.8rem);
+    line-height: 120%;
+    letter-spacing: -0.03em;
   }
 
   .contact-hero-image-wrapper {
@@ -2290,6 +2326,7 @@
   .contact-hero-face-img {
     width: 100%;
     height: 100%;
+    margin-top: 0;
     object-fit: cover;
     object-position: 70% center;
     -webkit-mask-image: none;
@@ -2375,19 +2412,30 @@
 }
 
 .services-hero-title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-  color: #462918;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
+  max-width: 497px;
 }
 
+.services-hero-title-regular,
 .services-hero-title-italic {
-  font-family: var(--font-serif);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
+  display: block;
 }
 
 .services-intro-section {
@@ -2999,29 +3047,39 @@
 }
 
 .about-hero-title {
-  font-family: var(--font-serif);
-  font-size: var(--fs-h1);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-direction: column;
-  color: #462918;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  color: #492B19;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
   margin: 0;
 }
 
 .about-hero-line1 {
-  font-family: var(--font-serif);
-  font-weight: var(--fw-h1);
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
   font-style: normal;
-  color: #462918;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
 }
 
 .about-hero-line2 {
-  font-family: var(--font-serif);
-  font-weight: var(--fw-h1);
-  font-style: italic;
-  color: #0D574A;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  color: #492B19;
 }
 
 /* ==========================================================================
@@ -3887,11 +3945,14 @@
 }
 
 .about-hero-title {
-  max-width: 620px;
-  font-size: clamp(2.35rem, 3.4vw, 3.75rem);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
+  max-width: 497px;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
   font-weight: 400;
+  font-style: normal;
+  vertical-align: middle;
 }
 
 .about-hero-line1,
@@ -4009,35 +4070,46 @@
 }
 
 .about-hero-text-wrap {
-  width: min(100%, 470px);
-  max-width: 470px;
+  width: min(100%, 497px);
+  max-width: 497px;
 }
 
 .about-hero-title {
   display: flex;
   flex-direction: column;
-  font-size: clamp(2.1rem, 3.8vw, 2.8rem);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
   font-weight: 400;
-  color: #462918 !important;
+  font-style: normal;
+  vertical-align: middle;
+  color: #492B19 !important;
   margin: 0;
 }
 
 .about-hero-line1 {
   display: block;
-  color: #462918 !important;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #492B19 !important;
   font-style: normal !important;
   font-weight: 400;
-  white-space: nowrap;
+  vertical-align: middle;
 }
 
 .about-hero-line2 {
   display: block;
-  color: #462918 !important;
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  color: #492B19 !important;
   font-style: normal !important;
   font-weight: 400;
-  white-space: nowrap;
+  vertical-align: middle;
 }
 
 @media (max-width: 1024px) {

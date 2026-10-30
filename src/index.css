@@ -1,4 +1,4 @@
-/* LIORA LUXEE WELLNESS - Global Design Tokens from Figma Style Guide */
+﻿/* LIORA LUXEE WELLNESS - Global Design Tokens from Figma Style Guide */
 :root {
   /* Brand Palette - Exact match to Figma Style Guide (Slide 16:9 - 1) */
   --color-primary-green: #0c594b; /* Swatch 1 - Dark Teal / Forest Green */
@@ -93,6 +93,7 @@ html {
   color: var(--color-text-main);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
