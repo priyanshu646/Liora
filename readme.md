@@ -13,6 +13,7 @@ npm ci
 Copy `backend/.env.example` to `backend/.env` and enter the SMTP settings for the mailbox that will send contact messages. For Gmail, use an app password rather than your regular account password. Keep `backend/.env` private; it is excluded from Git.
 
 The contact form delivers messages to `info@lioraluxeewellness.com` by default. Change `CONTACT_TO` in `backend/.env` if the company wants to use a different inbox.
+The success response means the SMTP server accepted the message; it does not confirm delivery to the inbox. If a submission is missing, check spam/quarantine and the SMTP provider's delivery or bounce logs.
 
 ### Start the app
 

@@ -19,12 +19,24 @@ export default function ContactFormSection() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    let nextValue = value;
+    if (name === 'name' || name === 'surname') {
+      nextValue = value.replace(/[^A-Za-z]/g, '').slice(0, 80);
+    } else if (name === 'phone') {
+      nextValue = value.replace(/\D/g, '').slice(0, 10);
+    }
+
+    setFormData((prev) => ({ ...prev, [name]: nextValue }));
     setError('');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (Object.values(formData).some((value) => !value.trim())) {
+      setError('Please complete all contact fields.');
+      return;
+    }
+
     setIsSubmitting(true);
     setError('');
     setSubmitted(false);
@@ -74,7 +86,7 @@ export default function ContactFormSection() {
           {submitted && (
             <div className="contact-form-success-banner" role="status">
               <CheckCircle2 size={18} />
-              <span>Thank you! Your message has been sent to our wellness team. We will contact you shortly.</span>
+              <span>Thank you! Your message has been submitted. Our wellness team will contact you shortly.</span>
             </div>
           )}
           {error && (
@@ -95,6 +107,9 @@ export default function ContactFormSection() {
                   onChange={handleChange}
                   placeholder="Name"
                   className="contact-pill-input"
+                  pattern="[A-Za-z]+"
+                  title="Use letters only."
+                  maxLength={80}
                   required
                 />
               </div>
@@ -107,6 +122,9 @@ export default function ContactFormSection() {
                   onChange={handleChange}
                   placeholder="Surname"
                   className="contact-pill-input"
+                  pattern="[A-Za-z]+"
+                  title="Use letters only."
+                  maxLength={80}
                   required
                 />
               </div>
@@ -135,6 +153,9 @@ export default function ContactFormSection() {
                   onChange={handleChange}
                   placeholder="Phone number"
                   className="contact-pill-input"
+                  inputMode="numeric"
+                  pattern="[0-9]{10}"
+                  title="Enter exactly 10 digits."
                   required
                 />
               </div>
