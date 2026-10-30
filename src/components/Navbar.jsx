@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { clinicData } from '../data/clinicData';
 
-export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavigate }) {
+export default function Navbar({ onOpenBooking, currentPage = 'home', onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -55,7 +55,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
         {/* Brand Logo */}
         <a href="#home" onClick={handleLogoClick} className="navbar-logo" aria-label="LIORA Luxee Wellness Home">
           <img
-            src="/assets/Liora wellness logo.png"
+            src="/assests/Liora wellness logo.png"
             alt="LIORA LUXEE WELLNESS"
             className="navbar-logo-image"
           />
@@ -86,7 +86,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
 
           <button
             onClick={onOpenBooking}
-            className="btn-primary-green navbar-cta-btn"
+            className="navbar-cta-btn"
             id="navbar-book-btn"
           >
             Book Consultation
@@ -128,7 +128,7 @@ export default function Navbar({ onOpenBooking, currentPage = 'contact', onNavig
               setMobileMenuOpen(false);
               onOpenBooking();
             }}
-            className="btn-primary-green mobile-nav-cta"
+            className="navbar-cta-btn mobile-nav-cta"
           >
             Book Consultation
           </button>

@@ -29,22 +29,11 @@ export default function Footer({ onNavigate }) {
     <footer className="site-footer" id="footer-contact">
       {/* Background Watermark Oval Motif on right side */}
       <div className="footer-watermark" aria-hidden="true">
-        <svg viewBox="0 0 380 450" className="watermark-svg" fill="none">
-          <ellipse
-            cx="220"
-            cy="240"
-            rx="150"
-            ry="200"
-            stroke="rgba(212, 177, 163, 0.45)"
-            strokeWidth="48"
-          />
-          <circle
-            cx="210"
-            cy="150"
-            r="38"
-            fill="rgba(212, 177, 163, 0.45)"
-          />
-        </svg>
+        <img
+          src="/assests/Footer icon.png"
+          alt=""
+          className="watermark-img"
+        />
       </div>
 
       <div className="container footer-container">
@@ -53,7 +42,7 @@ export default function Footer({ onNavigate }) {
           <div className="footer-logo">
             <a href="#home" onClick={(e) => { e.preventDefault(); onNavigate && onNavigate('home'); }} className="footer-logo-link" aria-label="LIORA Luxee Wellness Home">
               <img
-                src="/assets/Liora wellness logo.png"
+                src="/assests/Liora wellness logo.png"
                 alt="LIORA LUXEE WELLNESS"
                 className="footer-logo-image"
               />

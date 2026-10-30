@@ -17,14 +17,28 @@ export default function AboutInteriorGallery() {
   return (
     <section className="about-gallery-section" id="clinic-spaces">
       <div className="container about-gallery-container">
-        {/* Previous Chevron Button */}
+        {/* Previous Chevron Button (Small, sleek luxury chevron) */}
         <button
           type="button"
           className="about-gallery-arrow about-gallery-prev"
           onClick={prevSlide}
           aria-label="Previous interior slide"
         >
-          <ChevronLeft size={28} />
+          <svg
+            className="gallery-chevron-svg gallery-chevron-small"
+            viewBox="0 0 10 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 2L2 9L8 16"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
 
         <div className="about-gallery-frame">
@@ -58,14 +72,28 @@ export default function AboutInteriorGallery() {
           </div>
         </div>
 
-        {/* Next Chevron Button */}
+        {/* Next Chevron Button (Little big, prominent luxury chevron) */}
         <button
           type="button"
           className="about-gallery-arrow about-gallery-next"
           onClick={nextSlide}
           aria-label="Next interior slide"
         >
-          <ChevronRight size={28} />
+          <svg
+            className="gallery-chevron-svg gallery-chevron-small"
+            viewBox="0 0 10 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M2 2L8 9L2 16"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </section>

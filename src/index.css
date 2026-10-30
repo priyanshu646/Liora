@@ -1,61 +1,73 @@
-/* LIORA LUXEE WELLNESS - Global Design Tokens */
+﻿/* LIORA LUXEE WELLNESS - Global Design Tokens from Figma Style Guide */
 :root {
-  /* Brand Palette - Exact match to PDF */
-  --bg-primary: #FAF7F2;
-  --bg-secondary: #F6F3EC;
-  --bg-card: #EFE3D6;
-  --bg-card-hover: #E9DCce;
-  --bg-footer: #877567;
-  --bg-footer-dark: #776659;
+  /* Brand Palette - Exact match to Figma Style Guide (Slide 16:9 - 1) */
+  --color-primary-green: #0c594b; /* Swatch 1 - Dark Teal / Forest Green */
+  --color-primary-green-hover: #084338;
+  --color-dark-brown: #462918;    /* Swatch 2 - Chocolate Brown */
+  --color-warm-ivory: #ECEAE3;    /* Swatch 3 - Warm Ivory / Cream */
+  --color-blush-taupe: #DBC9C0;   /* Swatch 4 - Soft Mauve / Blush Taupe */
+  --color-clay-taupe: #9B7E6F;    /* Swatch 5 - Clay Brown / Taupe */
+  --color-clay-taupe-hover: #8A6E5F;
+  --color-charcoal: #1D1D1D;      /* Swatch 6 - Charcoal Black */
+  --color-emerald-deep: #02502B;  /* Swatch 7 - Deep Emerald */
+  --color-warm-tan: #D1A070;      /* Swatch 8 - Tan Caramel */
+  --color-sage-light: #E1E9E5;    /* Swatch 9 - Pale Sage / Mint */
 
-  /* Typography & Theme Colors */
-  --color-olive-dark: #35472F;
-  --color-olive-light: #4D6146;
-  --color-text-main: #24201D;
-  --color-text-muted: #5E554D;
-  --color-text-light: #8E847C;
-  --color-btn-green: #193828;
-  --color-btn-green-hover: #234B37;
-  --color-btn-taupe: #8D7B6D;
-  --color-btn-taupe-hover: #7D6B5D;
+  /* Semantic Theme Aliases */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #ECEAE3;
+  --bg-card: #DBC9C0;
+  --bg-card-hover: #E4D5CD;
+  --bg-footer: #9B7E6F;
+  --bg-footer-dark: #8A6E5F;
 
-  /* Fonts - Exact to PDF Typography Specification */
+  --color-olive-dark: #0D574A;
+  --color-olive-light: #166A5B;
+  --color-text-main: #462918;
+  --color-text-muted: #5E5047;
+  --color-text-light: #8E7F75;
+  --color-btn-green: #0c594b;
+  --color-btn-green-hover: #084338;
+  --color-btn-taupe: #9B7E6F;
+  --color-btn-taupe-hover: #8A6E5F;
+
+  /* Fonts - Exact Figma Typeface Specification */
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Typography Scale Tokens from PDF Table */
-  --fs-h1: clamp(48px, 5vw, 64px);
+  /* Typography Scale Tokens */
+  --fs-h1: clamp(44px, 5.2vw, 64px);
   --fw-h1: 400;
 
-  --fs-h2: 48px;
+  --fs-h2: clamp(34px, 3.8vw, 48px);
   --fw-h2: 600;
 
-  --fs-h3: 32px;
-  --fw-h3: 500;
+  --fs-h3: clamp(24px, 2.6vw, 32px);
+  --fw-h3: 600;
 
-  --fs-h4: 32px;
+  --fs-h4: 28px;
   --fw-h4: 600;
 
-  --fs-h5: 24px;
+  --fs-h5: 20px;
   --fw-h5: 600;
 
-  --fs-h6: 20px;
+  --fs-h6: 18px;
   --fw-h6: 600;
 
-  --fs-subtitle-1: 20px;
+  --fs-subtitle-1: 18px;
   --fw-subtitle-1: 600;
 
-  --fs-subtitle-2: 16px;
+  --fs-subtitle-2: 15px;
   --fw-subtitle-2: 500;
 
-  --fs-body-1: 20px;
+  --fs-body-1: 18px;
   --fw-body-1: 400;
 
-  --fs-body-2: 15px;
+  --fs-body-2: 14px;
   --fw-body-2: 400;
 
   --fs-button: 14px;
-  --fw-button: 400;
+  --fw-button: 500;
 
   --fs-caption: 12px;
   --fw-caption: 400;
@@ -64,8 +76,8 @@
   --fw-mini: 400;
 
   /* Spacings & Container */
-  --container-max: 1180px;
-  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --container-max: 1240px;
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -81,6 +93,7 @@ html {
   color: var(--color-text-main);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
@@ -198,42 +211,147 @@ button {
   line-height: 1.2;
 }
 
-/* Global Buttons */
-.btn-primary-green {
+/* ==========================================================================
+   FIGMA SLIDE 16:9 - 1 (STYLE GUIDE SPECIFICATIONS)
+   ========================================================================== */
+
+/* 1. Typeface Utilities */
+.font-serif,
+.font-playfair {
+  font-family: var(--font-serif);
+}
+
+.font-sans,
+.font-inter {
+  font-family: var(--font-sans);
+}
+
+.italic-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* 2. Slide 1 Buttons */
+/* Primary Dark Teal Green Pill Buttons ("Book Consultation", "Book Appointment") */
+.btn-primary,
+.btn-primary-green,
+.btn-book-consultation,
+.btn-book-appointment {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-btn-green);
+  background-color: #0c594b;
   color: #FFFFFF;
   padding: 0.65rem 1.65rem;
+  border-radius: 1000px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4),
+              inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: none;
+  transform: none;
+}
+
+.btn-primary:hover,
+.btn-primary-green:hover,
+.btn-book-consultation:hover,
+.btn-book-appointment:hover {
+  background-color: #0c594b;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4),
+              inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+  transform: none;
+  cursor: pointer;
+}
+
+/* Secondary Clay Brown Pill Buttons ("Know more", "Submit", "Book consultation") */
+.btn-secondary,
+.btn-secondary-taupe,
+.btn-find-more,
+.btn-know-more,
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9f8071;
+  color: #FFFFFF;
+  padding: 0.55rem 1.75rem;
+  border-radius: 1000px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-button);
+  letter-spacing: 0.01em;
+  border: 1.5px solid #C1AC9F;
+  box-shadow: 0px 40px 30px -40px #E6E6E6 inset,
+              0px -40px 10px -40px #282828 inset,
+              0px 40px 10px -40px #282828 inset,
+              0 4px 12px rgba(70, 41, 24, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background-color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.btn-secondary:hover,
+.btn-secondary-taupe:hover,
+.btn-find-more:hover,
+.btn-know-more:hover,
+.btn-submit:hover {
+  background-color: #8c6e60;
+  border-color: #B29789;
+  transform: translateY(-1.5px);
+  box-shadow: 0px 40px 30px -40px #E6E6E6 inset,
+              0px -40px 10px -40px #282828 inset,
+              0px 40px 10px -40px #282828 inset,
+              0 6px 18px rgba(70, 41, 24, 0.35);
+}
+
+/* Extended / Full-Width Pill Button ("Request a Consultation") */
+.btn-request-consultation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-green);
+  color: #FFFFFF;
+  padding: 0.75rem 2rem;
   border-radius: 9999px;
   font-family: var(--font-sans);
   font-size: var(--fs-button);
   font-weight: var(--fw-button);
   letter-spacing: 0.02em;
+  border: none;
+  cursor: pointer;
   transition: background-color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
-.btn-primary-green:hover {
-  background-color: var(--color-btn-green-hover);
+.btn-request-consultation:hover {
+  background-color: var(--color-primary-green-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(25, 56, 40, 0.25);
+  box-shadow: 0 6px 18px rgba(13, 87, 74, 0.25);
 }
 
-.btn-find-more {
+/* Outline Pill Badge ("Laser") from Slide 1 */
+.badge-outline-pill,
+.btn-outline-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-btn-taupe);
-  color: #FFFFFF;
-  padding: 0.5rem 1.75rem;
+  background-color: transparent;
+  color: var(--color-dark-brown);
+  border: 1px solid #D8CABC;
+  padding: 0.35rem 1.15rem;
   border-radius: 9999px;
   font-family: var(--font-sans);
-  font-size: var(--fs-button);
-  font-weight: var(--fw-button);
-}
-
-.btn-find-more:hover {
-  background-color: var(--color-btn-taupe-hover);
-  transform: translateY(-1.5px);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: default;
+  transition: all var(--transition-smooth);
 }

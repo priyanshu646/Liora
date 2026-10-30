@@ -17,14 +17,14 @@ export const clinicData = {
     highlight: "Radiance & Peace at", 
     clinicName: "Liora Luxee Wellness",
     ctaText: "Book Consultation",
-    image: "/assets/pdf_img_10_2556x3194.jpeg",
+    image: "/assests/Home page image.png",
   },
 
   whoWeAre: {
     title: "Who We Are",
     paragraph:
       "Liora Luxee Wellness is a luxury dermatology clinic dedicated to advanced healthy, radiant skin care. Through advanced treatments & personalized care, we combine science and aesthetics to elevate skin wellness & confidence. The aim is to illuminate natural beauty & bring confidence that shines from within.",
-    image: "/assets/pdf_img_8_720x900.jpeg",
+    image: "/assests/image 1.png",
   },
 
   philosophy: {
@@ -50,7 +50,7 @@ export const clinicData = {
           "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
       },
     ],
-    ctaText: "Find more",
+    ctaText: "Know more",
   },
 
   whatWeDo: {
@@ -95,39 +95,71 @@ export const clinicData = {
   gallery: [
     {
       id: 1,
-      image: "/assets/gallery_exact_1.png",
+      image: "/assests/Rectangle 4.png",
       alt: "Treatment suite with massage bed",
     },
     {
       id: 2,
-      image: "/assets/gallery_exact_2.png",
+      image: "/assests/Rectangle 5.png",
       alt: "Marble reception with illuminated LIORA sign",
     },
     {
       id: 3,
-      image: "/assets/gallery_exact_3.png",
-      alt: "Skincare bottles on travertine",
+      image: "/assests/Rectangle 8.png",
+      alt: "Lounge area and Caffeine & Kindness bar",
     },
     {
       id: 4,
-      image: "/assets/gallery_exact_4.png",
+      image: "/assests/Rectangle 6.png",
       alt: "Consultation lounge",
     },
     {
       id: 5,
-      image: "/assets/gallery_exact_5.png",
-      alt: "Warmly lit boutique display shelves",
+      image: "/assests/Rectangle 7.png",
+      alt: "Warmly lit boutique display shelves and treatment suite",
     },
     {
       id: 6,
-      image: "/assets/gallery_exact_6.png",
-      alt: "Lush plant wall with backlit LIORA sign",
+      image: "/assests/Rectangle 9.png",
+      alt: "Wood-fluted wall with 3D LIORA emblem",
     },
   ],
 
   testimonials: {
     badge: "Testimonials",
     title: "What our\nclients say",
+    items: [
+      {
+        id: 1,
+        quote:
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
+        author: "NAME",
+      },
+      {
+        id: 2,
+        quote:
+          "My skin has transformed completely since starting my bespoke clinical protocol at LIORA. The bespoke treatments and serene sanctuary setting create an experience like no other.",
+        author: "PRIYA SHARMA",
+      },
+      {
+        id: 3,
+        quote:
+          "The medical precision combined with pure luxury made all the difference. The attention to detail from the doctors and concierge team at Defence Colony is unmatched.",
+        author: "ANANYA VERMA",
+      },
+      {
+        id: 4,
+        quote:
+          "From the consultation suite to the final post-treatment care, every step was tailored to my sensitive skin. Truly radiant results and unparalleled peace of mind.",
+        author: "ROHIT MEHTA",
+      },
+      {
+        id: 5,
+        quote:
+          "LIORA redefines modern self-care. The clinical technology is world-class, and the atmosphere feels like a high-end European sanctuary.",
+        author: "SIMRAN KAUR",
+      },
+    ],
     quote:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna",
     author: "NAME",
@@ -139,6 +171,7 @@ export const clinicData = {
     subtitle:
       "Book your session  and let our amazing experience be your sanctuary for a balanced life.",
     ctaText: "Book Consultation",
+    backgroundImage: "/assests/booking bg with icon.png",
   },
 
   experience: {
@@ -167,7 +200,7 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/contact/contact_hero_wide.jpg",
+      image: "/assests/landing page contact us.png",
     },
     chat: {
       eyebrow: "Have questions?",
@@ -191,7 +224,7 @@ export const clinicData = {
     faqs: {
       eyebrow: "FAQs",
       title: "Immerse yourself in luxury",
-      image: "/assets/contact/faq_illustration.png",
+      image: "/assests/FAQs img.png",
       items: [
         {
           id: 1,
@@ -243,7 +276,7 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/services/services_hero_clean.jpg",
+      image: "/assests/landing pg img.png",
     },
     header: {
       subtitle: "Our Services",
@@ -792,9 +825,9 @@ export const clinicData = {
     hero: {
       line1: "Rediscover your",
       line2: "Radiance & Peace",
-      image: "/assets/about/exact_hero_model.png",
-      bgImage: "/assets/about/exact_hero_bg_clean.png",
-      fullBanner: "/assets/about/exact_hero_banner.png",
+      image: "/assests/Landing page image 2.png",
+      bgImage: "/assests/Landing page image 2.png",
+      fullBanner: "/assests/Landing page image 2.png",
     },
     introQuote: {
       text: "LIORA was born from a simple belief true luxury is not only about how you look, but how you feel. Created to redefine modern self-care, LIORA brings together advanced wellness, beauty, aesthetics, & exceptional experiences under one distinctive vision. Inspired by the Hebrew name Liora, meaning “my light” or “God’s light,” LIORA represents radiance, renewal, & inner grace.",
@@ -802,12 +835,12 @@ export const clinicData = {
     ourStory: {
       title: "Our Story",
       paragraph: "Liora Luxee Wellness was created to bring together advanced dermatology and refined wellness. Built on the belief that healthy skin enhances confidence & well-being, Liora offers science-driven treatments in a calm, luxurious environment. By combining medical expertise with personalized care, we focus on restoring, rejuvenating, and enhancing natural skin health.",
-      image: "/assets/about/exact_story_reception_perfect.png",
+      image: "/assests/Image story.png",
     },
     whyLiora: {
       eyebrow: "Why Liora?",
       title: "Lorem ipsum dolor sit amet",
-      image: "/assets/about/exact_why_liora_oval.png",
+      image: "/assests/why liora img.png",
       accordion: [
         {
           id: 1,
@@ -866,7 +899,7 @@ export const clinicData = {
         title: "Vision",
         text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore",
       },
-      image: "/assets/about/exact_mission_vision_oval.png",
+      image: "/assests/mission img.png",
     },
     interiorGallery: [
       {
@@ -892,12 +925,6 @@ export const clinicData = {
         image: "/assets/pdf_img_1_1297x814.jpeg",
         title: "Architectural Wood-Fluted LIORA Wall",
         alt: "Illuminated LIORA emblem on natural wood-fluted wall",
-      },
-      {
-        id: 5,
-        image: "/assets/gallery_exact_2.png",
-        title: "Liora Grand Travertine Lobby",
-        alt: "Travertine and fluted oak reception greeting guests",
       },
     ],
     experts: {
