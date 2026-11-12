@@ -238,14 +238,116 @@
       rgba(230, 216, 204, 0) 50%);
 }
 
+/* ==========================================================================
+   2. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  background-color: #E6D8CC;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+}
+
 @media (max-width: 768px) {
-  .hero-overlay {
-    background: linear-gradient(180deg,
-        rgba(230, 216, 204, 0.95) 0%,
-        rgba(230, 216, 204, 0.8) 60%,
-        rgba(230, 216, 204, 0.92) 100%);
+  .hero-bg-image {
+    object-position: 60% center;
   }
 }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(230, 216, 204, 0.25) 0%,
+      rgba(230, 216, 204, 0) 50%);
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(230, 216, 204, 0.08) 0%,
+      rgba(230, 216, 204, 0.15) 40%,
+      rgba(230, 216, 204, 0.78) 100%
+    );
+  }
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 7rem;
+  padding-bottom: clamp(3rem, 10vh, 6rem);
+}
+
+.hero-text-block {
+  max-width: 700px;
+}
+
+.hero-eyebrow {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  color: #492B19;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-italic-highlight {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  color: #492B19;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+}
+
+.hero-clinic-name {
+  font-family: 'Playfair Display', var(--font-serif);
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  color: #0D574A;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  vertical-align: middle;
+  margin-top: 0.25rem;
+}
+
 
 .hero-content-container {
   position: relative;
@@ -1118,9 +1220,27 @@
 }
 
 @media (max-width: 800px) {
+  .site-footer {
+    padding-top: 8rem; 
+    padding-bottom: 2rem;
+  }
+
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
+  }
+
+  .footer-watermark {
+    top: auto;
+    bottom: -10px;
+    right: -10%;
+    height: 65%;
+    align-items: flex-end;
+  }
+
+  .watermark-img {
+    object-position: right bottom;
+    height: 100%;
   }
 }
 
@@ -4056,7 +4176,6 @@
   }
 }
 
-/* FINAL FIX: About page hero typography and positioning to match the Figma reference */
 .about-hero-section {
   height: 100vh;
   height: 100svh;
@@ -4158,5 +4277,64 @@
   .about-hero-line1,
   .about-hero-line2 {
     white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero-section {
+    height: 760px;
+    min-height: 0;
+    background-position: 60% bottom; 
+    align-items: flex-start; 
+  }
+
+
+  .about-hero-container {
+    padding: 2rem 20px 0; 
+  }
+
+  .about-hero-text-wrap {
+    max-width: 100%;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .about-hero-title {
+    font-size: clamp(1.9rem, 7vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .about-hero-line1,
+  .about-hero-line2 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 800px) {
+  .site-footer {
+    /* Decreased from 8rem to reduce the top gap */
+    padding-top: 4rem; 
+    padding-bottom: 2rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-watermark {
+    top: auto;
+    bottom: -10px;
+    right: -10%;
+    height: 65%;
+    align-items: flex-end;
+  }
+
+  .watermark-img {
+    object-position: right bottom;
+    height: 100%;
   }
 }
