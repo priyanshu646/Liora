@@ -4315,7 +4315,6 @@
 
 @media (max-width: 800px) {
   .site-footer {
-    /* Decreased from 8rem to reduce the top gap */
     padding-top: 4rem; 
     padding-bottom: 2rem;
   }
